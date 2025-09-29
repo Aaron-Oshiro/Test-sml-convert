@@ -1,0 +1,8 @@
+unique_name: model_TPCH_ANALYSIS
+object_type: model
+label: TPCH_ANALYSIS
+dimensions: []
+metrics: []
+partitions: []
+perspectives: []
+relationships: []

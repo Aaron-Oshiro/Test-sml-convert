@@ -1,0 +1,68 @@
+unique_name: CALL_CENTER
+object_type: dataset
+label: CALL_CENTER
+columns:
+  - name: CC_CALL_CENTER_SK
+    data_type: int
+  - name: CC_CALL_CENTER_ID
+    data_type: string
+  - name: CC_REC_START_DATE
+    data_type: date
+  - name: CC_REC_END_DATE
+    data_type: date
+  - name: CC_CLOSED_DATE_SK
+    data_type: int
+  - name: CC_OPEN_DATE_SK
+    data_type: int
+  - name: CC_NAME
+    data_type: string
+  - name: CC_CLASS
+    data_type: string
+  - name: CC_EMPLOYEES
+    data_type: int
+  - name: CC_SQ_FT
+    data_type: int
+  - name: CC_HOURS
+    data_type: string
+  - name: CC_MANAGER
+    data_type: string
+  - name: CC_MKT_ID
+    data_type: int
+  - name: CC_MKT_CLASS
+    data_type: string
+  - name: CC_MKT_DESC
+    data_type: string
+  - name: CC_MARKET_MANAGER
+    data_type: string
+  - name: CC_DIVISION
+    data_type: int
+  - name: CC_DIVISION_NAME
+    data_type: string
+  - name: CC_COMPANY
+    data_type: int
+  - name: CC_COMPANY_NAME
+    data_type: string
+  - name: CC_STREET_NUMBER
+    data_type: string
+  - name: CC_STREET_NAME
+    data_type: string
+  - name: CC_STREET_TYPE
+    data_type: string
+  - name: CC_SUITE_NUMBER
+    data_type: string
+  - name: CC_CITY
+    data_type: string
+  - name: CC_COUNTY
+    data_type: string
+  - name: CC_STATE
+    data_type: string
+  - name: CC_ZIP
+    data_type: string
+  - name: CC_COUNTRY
+    data_type: string
+  - name: CC_GMT_OFFSET
+    data_type: int
+  - name: CC_TAX_PERCENTAGE
+    data_type: int
+connection_id: TPCH_ANALYSIS
+table: CALL_CENTER
