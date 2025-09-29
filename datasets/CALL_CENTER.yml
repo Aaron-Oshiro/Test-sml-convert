@@ -64,5 +64,5 @@ columns:
     data_type: int
   - name: CC_TAX_PERCENTAGE
     data_type: int
-connection_id: TPCH_ANALYSIS
+connection_id: connection_TPCDS_SF10TCL
 table: CALL_CENTER

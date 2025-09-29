@@ -20,5 +20,5 @@ columns:
     data_type: int
   - name: O_COMMENT
     data_type: string
-connection_id: TPCH_ANALYSIS
+connection_id: connection_TPCH_SF1
 table: ORDERS
