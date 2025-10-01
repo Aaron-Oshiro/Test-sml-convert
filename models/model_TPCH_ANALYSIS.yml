@@ -5,4 +5,20 @@ dimensions: []
 metrics: []
 partitions: []
 perspectives: []
-relationships: []
+relationships:
+  - unique_name: SYS_RELATIONSHIP_bb02a3c8-529e-4d70-9ed3-312d3dd6f00d
+    from:
+      dataset: LINEITEM
+      join_columns:
+        - L_ORDERKEY
+    to:
+      dimension: ORDERS_dimension
+      level: ORDERS
+  - unique_name: SYS_RELATIONSHIP_2a74bf09-f867-49de-a97d-e9041ad2dcc1
+    from:
+      dataset: SUPPLIER
+      join_columns:
+        - S_NATIONKEY
+    to:
+      dimension: NATION_dimension
+      level: NATION
