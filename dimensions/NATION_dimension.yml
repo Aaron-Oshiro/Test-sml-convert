@@ -9,11 +9,11 @@ hierarchies:
       - unique_name: NATION
         secondary_attributes:
           - unique_name: NATION_NAME
-            label: n_name
+            label: N_NAME
             dataset: NATION
             key_columns:
-              - n_name
-            name_column: n_name
+              - N_NAME
+            name_column: N_NAME
 level_attributes:
   - unique_name: NATION
     label: NATION

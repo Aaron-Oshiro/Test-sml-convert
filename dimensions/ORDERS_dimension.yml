@@ -8,11 +8,11 @@ hierarchies:
       - unique_name: ORDERS
         secondary_attributes:
           - unique_name: ORDER_DATE
-            label: o_orderdate
-            dataset: orders
+            label: O_ORDERDATE
+            dataset: ORDERS
             key_columns:
-              - o_orderdate
-            name_column: o_orderdate
+              - O_ORDERDATE
+            name_column: O_ORDERDATE
 level_attributes:
   - unique_name: ORDERS
     label: ORDERS
