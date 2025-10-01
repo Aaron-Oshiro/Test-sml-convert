@@ -22,4 +22,12 @@ level_attributes:
     key_columns:
       - N_NATIONKEY
     name_column: N_NATIONKEY
+relationships:
+  - from:
+      dataset: NATION
+      join_columns:
+        - N_REGIONKEY
+    to:
+      level: NATION
+    type: snowflake
 type: standard

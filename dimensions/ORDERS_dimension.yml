@@ -20,4 +20,12 @@ level_attributes:
     key_columns:
       - O_ORDERKEY
     name_column: O_ORDERKEY
+relationships:
+  - from:
+      dataset: ORDERS
+      join_columns:
+        - O_CUSTKEY
+    to:
+      level: ORDERS
+    type: snowflake
 type: standard

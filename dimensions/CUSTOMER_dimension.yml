@@ -45,4 +45,12 @@ level_attributes:
     key_columns:
       - C_CUSTKEY
     name_column: C_CUSTKEY
+relationships:
+  - from:
+      dataset: CUSTOMER
+      join_columns:
+        - C_NATIONKEY
+    to:
+      level: CUSTOMER
+    type: snowflake
 type: standard
