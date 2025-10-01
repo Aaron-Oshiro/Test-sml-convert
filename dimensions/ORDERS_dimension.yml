@@ -1,0 +1,17 @@
+unique_name: ORDERS_dimension
+object_type: dimension
+label: ORDERS
+hierarchies:
+  - unique_name: ORDERS_dimension_default_hierarchy
+    label: ORDERS Hierarchy
+    levels:
+      - unique_name: ORDERS
+        secondary_attributes: []
+level_attributes:
+  - unique_name: ORDERS
+    label: ORDERS
+    dataset: ORDERS
+    key_columns:
+      - O_ORDERKEY
+    name_column: O_ORDERKEY
+type: standard

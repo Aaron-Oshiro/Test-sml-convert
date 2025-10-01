@@ -1,0 +1,25 @@
+unique_name: NATION_dimension
+object_type: dimension
+label: NATION
+description: testing comment for table
+hierarchies:
+  - unique_name: NATION_dimension_default_hierarchy
+    label: NATION Hierarchy
+    levels:
+      - unique_name: NATION
+        secondary_attributes:
+          - unique_name: NATION_NAME
+            label: n_name
+            dataset: NATION
+            key_columns:
+              - n_name
+            name_column: n_name
+level_attributes:
+  - unique_name: NATION
+    label: NATION
+    description: testing comment for table
+    dataset: NATION
+    key_columns:
+      - N_NATIONKEY
+    name_column: N_NATIONKEY
+type: standard
