@@ -21,5 +21,8 @@ columns:
   - name: CUSTOMER_COUNTRY_CODE
     data_type: string
     sql: LEFT(c_phone, 2)
+  - name: C_CUSTOMER_ORDER_COUNT
+    data_type: int
+    sql: COUNT(orders.o_orderkey)
 connection_id: connection_TPCH_SF1
 table: CUSTOMER
