@@ -26,6 +26,18 @@ hierarchies:
             key_columns:
               - c_name
             name_column: c_name
+          - unique_name: CUSTOMER_NATION_NAME
+            label: n_name
+            dataset: nation
+            key_columns:
+              - n_name
+            name_column: n_name
+          - unique_name: CUSTOMER_REGION_NAME
+            label: r_name
+            dataset: region
+            key_columns:
+              - r_name
+            name_column: r_name
 level_attributes:
   - unique_name: CUSTOMER
     label: CUSTOMER

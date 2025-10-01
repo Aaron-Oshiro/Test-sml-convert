@@ -6,14 +6,13 @@ metrics:
   - unique_name: CUSTOMER_COUNT
   - unique_name: CUSTOMER_ORDER_COUNT
   - unique_name: AVERAGE_LINE_ITEMS_PER_ORDER
-  - unique_name: LOW_PERC_OF_PRICE
   - unique_name: ORDER_AVERAGE_VALUE
   - unique_name: ORDER_COUNT
   - unique_name: SUPPLIER_COUNT
 partitions: []
 perspectives: []
 relationships:
-  - unique_name: SYS_RELATIONSHIP_72f6145f-da48-4499-bff5-7e120f408de6
+  - unique_name: SYS_RELATIONSHIP_c64367a4-3170-45aa-a690-f9961874b7fa
     from:
       dataset: LINEITEM
       join_columns:
@@ -21,7 +20,7 @@ relationships:
     to:
       dimension: ORDERS_dimension
       level: ORDERS
-  - unique_name: SYS_RELATIONSHIP_f04415d7-7ca2-464f-a287-bfcc784c3ce8
+  - unique_name: SYS_RELATIONSHIP_d7b153a5-cc1a-4e68-9134-d642942139ff
     from:
       dataset: SUPPLIER
       join_columns:

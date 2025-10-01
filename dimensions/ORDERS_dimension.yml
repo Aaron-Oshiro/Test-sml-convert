@@ -6,7 +6,13 @@ hierarchies:
     label: ORDERS Hierarchy
     levels:
       - unique_name: ORDERS
-        secondary_attributes: []
+        secondary_attributes:
+          - unique_name: ORDER_DATE
+            label: o_orderdate
+            dataset: orders
+            key_columns:
+              - o_orderdate
+            name_column: o_orderdate
 level_attributes:
   - unique_name: ORDERS
     label: ORDERS
