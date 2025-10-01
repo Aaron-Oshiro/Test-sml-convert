@@ -21,11 +21,15 @@ level_attributes:
       - O_ORDERKEY
     name_column: O_ORDERKEY
 relationships:
-  - from:
+  - unique_name: SYS_RELATIONSHIP_237d2d19-68c9-4c00-ae7f-235196934413
+    from:
       dataset: ORDERS
+      hierarchy: ORDERS_dimension_default_hierarchy
       join_columns:
         - O_CUSTKEY
-    to:
       level: ORDERS
-    type: snowflake
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER
+    type: embedded
 type: standard

@@ -23,11 +23,15 @@ level_attributes:
       - N_NATIONKEY
     name_column: N_NATIONKEY
 relationships:
-  - from:
+  - unique_name: SYS_RELATIONSHIP_89e2b9b8-72cf-40d8-888b-faeded5c2525
+    from:
       dataset: NATION
+      hierarchy: NATION_dimension_default_hierarchy
       join_columns:
         - N_REGIONKEY
-    to:
       level: NATION
-    type: snowflake
+    to:
+      dimension: REGION_dimension
+      level: REGION
+    type: embedded
 type: standard

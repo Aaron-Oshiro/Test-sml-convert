@@ -46,11 +46,15 @@ level_attributes:
       - C_CUSTKEY
     name_column: C_CUSTKEY
 relationships:
-  - from:
+  - unique_name: SYS_RELATIONSHIP_75bdb074-082a-4633-8e3f-223a1fb4feca
+    from:
       dataset: CUSTOMER
+      hierarchy: CUSTOMER_dimension_default_hierarchy
       join_columns:
         - C_NATIONKEY
-    to:
       level: CUSTOMER
-    type: snowflake
+    to:
+      dimension: NATION_dimension
+      level: NATION
+    type: embedded
 type: standard
