@@ -2,11 +2,18 @@ unique_name: model_TPCH_ANALYSIS
 object_type: model
 label: TPCH_ANALYSIS
 dimensions: []
-metrics: []
+metrics:
+  - unique_name: CUSTOMER_COUNT
+  - unique_name: CUSTOMER_ORDER_COUNT
+  - unique_name: AVERAGE_LINE_ITEMS_PER_ORDER
+  - unique_name: LOW_PERC_OF_PRICE
+  - unique_name: ORDER_AVERAGE_VALUE
+  - unique_name: ORDER_COUNT
+  - unique_name: SUPPLIER_COUNT
 partitions: []
 perspectives: []
 relationships:
-  - unique_name: SYS_RELATIONSHIP_bb02a3c8-529e-4d70-9ed3-312d3dd6f00d
+  - unique_name: SYS_RELATIONSHIP_72f6145f-da48-4499-bff5-7e120f408de6
     from:
       dataset: LINEITEM
       join_columns:
@@ -14,7 +21,7 @@ relationships:
     to:
       dimension: ORDERS_dimension
       level: ORDERS
-  - unique_name: SYS_RELATIONSHIP_2a74bf09-f867-49de-a97d-e9041ad2dcc1
+  - unique_name: SYS_RELATIONSHIP_f04415d7-7ca2-464f-a287-bfcc784c3ce8
     from:
       dataset: SUPPLIER
       join_columns:

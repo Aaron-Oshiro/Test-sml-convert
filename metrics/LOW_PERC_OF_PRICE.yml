@@ -1,0 +1,6 @@
+unique_name: LOW_PERC_OF_PRICE
+object_type: metric
+label: LOW_PERC_OF_PRICE
+calculation_method: percentile
+column: O_TOTALPRICE
+dataset: ORDERS
