@@ -12,7 +12,7 @@ metrics:
 partitions: []
 perspectives: []
 relationships:
-  - unique_name: SYS_RELATIONSHIP_c64367a4-3170-45aa-a690-f9961874b7fa
+  - unique_name: SYS_RELATIONSHIP_5742c486-c8fa-4ee7-a19e-43c76f5edd5a
     from:
       dataset: LINEITEM
       join_columns:
@@ -20,7 +20,7 @@ relationships:
     to:
       dimension: ORDERS_dimension
       level: ORDERS
-  - unique_name: SYS_RELATIONSHIP_d7b153a5-cc1a-4e68-9134-d642942139ff
+  - unique_name: SYS_RELATIONSHIP_fd6e075b-f357-4857-ae36-798cf6703422
     from:
       dataset: SUPPLIER
       join_columns:

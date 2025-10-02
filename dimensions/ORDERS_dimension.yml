@@ -8,7 +8,7 @@ hierarchies:
       - unique_name: ORDERS
         secondary_attributes:
           - unique_name: ORDER_DATE
-            label: O_ORDERDATE
+            label: ORDER_DATE
             dataset: ORDERS
             key_columns:
               - O_ORDERDATE
@@ -21,7 +21,7 @@ level_attributes:
       - O_ORDERKEY
     name_column: O_ORDERKEY
 relationships:
-  - unique_name: SYS_RELATIONSHIP_237d2d19-68c9-4c00-ae7f-235196934413
+  - unique_name: SYS_RELATIONSHIP_ed67915c-c820-466c-90bf-ba67b79dee21
     from:
       dataset: ORDERS
       hierarchy: ORDERS_dimension_default_hierarchy

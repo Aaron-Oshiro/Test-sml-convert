@@ -14,26 +14,26 @@ hierarchies:
               - CUSTOMER_COUNTRY_CODE
             name_column: CUSTOMER_COUNTRY_CODE
           - unique_name: CUSTOMER_MARKET_SEGMENT
-            label: C_MKTSEGMENT
+            label: CUSTOMER_MARKET_SEGMENT
             dataset: CUSTOMER
             key_columns:
               - C_MKTSEGMENT
             name_column: C_MKTSEGMENT
           - unique_name: CUSTOMER_NAME
-            label: C_NAME
+            label: CUSTOMER_NAME
             description: testing comment for dimmension
             dataset: CUSTOMER
             key_columns:
               - C_NAME
             name_column: C_NAME
           - unique_name: CUSTOMER_NATION_NAME
-            label: N_NAME
+            label: CUSTOMER_NATION_NAME
             dataset: NATION
             key_columns:
               - N_NAME
             name_column: N_NAME
           - unique_name: CUSTOMER_REGION_NAME
-            label: R_NAME
+            label: CUSTOMER_REGION_NAME
             dataset: REGION
             key_columns:
               - R_NAME
@@ -46,7 +46,7 @@ level_attributes:
       - C_CUSTKEY
     name_column: C_CUSTKEY
 relationships:
-  - unique_name: SYS_RELATIONSHIP_75bdb074-082a-4633-8e3f-223a1fb4feca
+  - unique_name: SYS_RELATIONSHIP_e9e28f8f-e580-47a5-89b7-26a70d211885
     from:
       dataset: CUSTOMER
       hierarchy: CUSTOMER_dimension_default_hierarchy

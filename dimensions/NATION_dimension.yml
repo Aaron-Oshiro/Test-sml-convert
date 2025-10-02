@@ -9,7 +9,7 @@ hierarchies:
       - unique_name: NATION
         secondary_attributes:
           - unique_name: NATION_NAME
-            label: N_NAME
+            label: NATION_NAME
             dataset: NATION
             key_columns:
               - N_NAME
@@ -23,7 +23,7 @@ level_attributes:
       - N_NATIONKEY
     name_column: N_NATIONKEY
 relationships:
-  - unique_name: SYS_RELATIONSHIP_89e2b9b8-72cf-40d8-888b-faeded5c2525
+  - unique_name: SYS_RELATIONSHIP_100f5796-0a0a-4c1a-8907-0754bf776103
     from:
       dataset: NATION
       hierarchy: NATION_dimension_default_hierarchy
