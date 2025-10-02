@@ -21,7 +21,7 @@ level_attributes:
       - O_ORDERKEY
     name_column: O_ORDERKEY
 relationships:
-  - unique_name: SYS_RELATIONSHIP_ed67915c-c820-466c-90bf-ba67b79dee21
+  - unique_name: SYS_RELATIONSHIP_17b0549d-67b6-4a82-a9c3-17b272f8d32c
     from:
       dataset: ORDERS
       hierarchy: ORDERS_dimension_default_hierarchy
