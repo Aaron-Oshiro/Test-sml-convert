@@ -1,6 +1,6 @@
 version: 1
-unique_name: TESTING_SPACES
+unique_name: TPCH_ANALYSIS
 object_type: catalog
-label: TESTING_SPACES
+label: TPCH_ANALYSIS
 aggressive_agg_promotion: false
 build_speculative_aggs: false

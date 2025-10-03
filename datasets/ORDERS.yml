@@ -1,0 +1,27 @@
+unique_name: ORDERS
+object_type: dataset
+label: ORDERS
+columns:
+  - name: O_ORDERKEY
+    data_type: int
+  - name: O_CUSTKEY
+    data_type: int
+  - name: O_ORDERSTATUS
+    data_type: string
+  - name: O_TOTALPRICE
+    data_type: int
+  - name: O_ORDERDATE
+    data_type: date
+  - name: O_ORDERPRIORITY
+    data_type: string
+  - name: O_CLERK
+    data_type: string
+  - name: O_SHIPPRIORITY
+    data_type: int
+  - name: O_COMMENT
+    data_type: string
+  - name: COUNT_LINE_ITEMS
+    data_type: int
+    sql: COUNT(lineitem.line_item_id)
+connection_id: connection_TPCH_SF1
+table: ORDERS

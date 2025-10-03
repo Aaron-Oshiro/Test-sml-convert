@@ -1,6 +1,0 @@
-unique_name: connection_DEMO_SCHEMA
-object_type: connection
-label: connection_DEMO_SCHEMA
-as_connection: con1
-database: AI_LINK
-schema: DEMO_SCHEMA

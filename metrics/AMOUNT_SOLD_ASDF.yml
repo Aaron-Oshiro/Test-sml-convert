@@ -1,6 +1,0 @@
-unique_name: AMOUNT_SOLD_ASDF
-object_type: metric
-label: AMOUNT_SOLD_ASDF
-calculation_method: sum
-column: ammount sold
-dataset: TESTING_SPACES_2

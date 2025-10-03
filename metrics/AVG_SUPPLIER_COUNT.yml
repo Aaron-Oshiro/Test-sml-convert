@@ -1,0 +1,6 @@
+unique_name: AVG_SUPPLIER_COUNT
+object_type: metric
+label: AVG_SUPPLIER_COUNT
+calculation_method: count non-null
+column: COUNT_LINE_ITEMS
+dataset: ORDERS

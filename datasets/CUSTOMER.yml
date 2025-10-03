@@ -1,0 +1,28 @@
+unique_name: CUSTOMER
+object_type: dataset
+label: CUSTOMER
+columns:
+  - name: C_CUSTKEY
+    data_type: int
+  - name: C_NAME
+    data_type: string
+  - name: C_ADDRESS
+    data_type: string
+  - name: C_NATIONKEY
+    data_type: int
+  - name: C_PHONE
+    data_type: string
+  - name: C_ACCTBAL
+    data_type: int
+  - name: C_MKTSEGMENT
+    data_type: string
+  - name: C_COMMENT
+    data_type: string
+  - name: CUSTOMER_COUNTRY_CODE
+    data_type: string
+    sql: LEFT(c_phone, 2)
+  - name: C_CUSTOMER_ORDER_COUNT
+    data_type: int
+    sql: COUNT(orders.o_orderkey)
+connection_id: connection_TPCH_SF1
+table: CUSTOMER

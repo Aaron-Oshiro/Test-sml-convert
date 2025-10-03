@@ -1,0 +1,6 @@
+unique_name: CUSTOMER_ORDER_COUNT
+object_type: metric
+label: CUSTOMER_ORDER_COUNT
+calculation_method: sum
+column: C_CUSTOMER_ORDER_COUNT
+dataset: CUSTOMER
