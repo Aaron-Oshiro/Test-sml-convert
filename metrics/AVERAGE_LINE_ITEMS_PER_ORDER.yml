@@ -1,6 +1,0 @@
-unique_name: AVERAGE_LINE_ITEMS_PER_ORDER
-object_type: metric
-label: AVERAGE_LINE_ITEMS_PER_ORDER
-calculation_method: average
-column: COUNT_LINE_ITEMS
-dataset: ORDERS

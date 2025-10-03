@@ -1,0 +1,17 @@
+unique_name: model_TESTING_SPACES
+object_type: model
+label: TESTING_SPACES
+dimensions: []
+metrics:
+  - unique_name: AMOUNT_SOLD_ASDF
+partitions: []
+perspectives: []
+relationships:
+  - unique_name: id something
+    from:
+      dataset: TESTING_SPACES
+      join_columns:
+        - ID
+    to:
+      dimension: TESTING_SPACES_2_dimension
+      level: TESTING_SPACES_2
