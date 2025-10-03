@@ -36,6 +36,6 @@ columns:
     data_type: string
   - name: LINE_ITEM_ID
     data_type: string
-    sql: CONCAT(l_orderkey, '-', l_linenumber)
+    sql: CONCAT(L_ORDERKEY, '-', L_LINENUMBER)
 connection_id: connection_TPCH_SF1
 table: LINEITEM
