@@ -6,7 +6,13 @@ hierarchies:
     label: REGION Hierarchy
     levels:
       - unique_name: REGION
-        secondary_attributes: []
+        secondary_attributes:
+          - unique_name: R_NAME
+            label: R_NAME
+            dataset: REGION
+            key_columns:
+              - R_NAME
+            name_column: R_NAME
 level_attributes:
   - unique_name: REGION
     label: REGION
