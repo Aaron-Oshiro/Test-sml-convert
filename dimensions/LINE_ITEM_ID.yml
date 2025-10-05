@@ -11,7 +11,7 @@ is_degenerate: true
 level_attributes:
   - unique_name: LINE_ITEM_ID
     label: LINE_ITEM_ID
-    dataset: LINE_ITEM_ID
+    dataset: LINEITEM
     key_columns:
       - LINE_ITEM_ID
     name_column: LINE_ITEM_ID
