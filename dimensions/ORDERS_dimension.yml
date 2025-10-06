@@ -15,7 +15,7 @@ hierarchies:
             name_column: O_ORDERDATE
 level_attributes:
   - unique_name: ORDERS_Level
-    label: ORDERS
+    label: ORDERS_asdf
     dataset: ORDERS
     key_columns:
       - O_ORDERKEY

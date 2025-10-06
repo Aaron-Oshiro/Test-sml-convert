@@ -15,7 +15,7 @@ hierarchies:
             name_column: R_NAME
 level_attributes:
   - unique_name: REGION_Level
-    label: REGION
+    label: REGION_asdf
     dataset: REGION
     key_columns:
       - R_REGIONKEY

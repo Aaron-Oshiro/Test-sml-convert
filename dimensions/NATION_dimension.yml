@@ -16,7 +16,7 @@ hierarchies:
             name_column: N_NAME
 level_attributes:
   - unique_name: NATION_Level
-    label: NATION
+    label: NATION_asdf
     description: testing comment for table
     dataset: NATION
     key_columns:

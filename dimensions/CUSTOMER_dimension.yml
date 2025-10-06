@@ -40,7 +40,7 @@ hierarchies:
             name_column: R_NAME
 level_attributes:
   - unique_name: CUSTOMER_Level
-    label: CUSTOMER
+    label: CUSTOMER_asdf
     dataset: CUSTOMER
     key_columns:
       - C_CUSTKEY
