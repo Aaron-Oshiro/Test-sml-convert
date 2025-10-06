@@ -7,29 +7,54 @@ hierarchies:
     levels:
       - unique_name: CUSTOMER_Level
         secondary_attributes:
-          - unique_name: BIRTHYEAR
-            label: BIRTHYEAR
+          - unique_name: CUSTOMER_COUNTRY_CODE
+            label: CUSTOMER_COUNTRY_CODE
             dataset: CUSTOMER
             key_columns:
-              - C_BIRTH_YEAR
-            name_column: C_BIRTH_YEAR
-          - unique_name: COUNTRY
-            label: COUNTRY
+              - CUSTOMER_COUNTRY_CODE
+            name_column: CUSTOMER_COUNTRY_CODE
+          - unique_name: CUSTOMER_MARKET_SEGMENT
+            label: CUSTOMER_MARKET_SEGMENT
             dataset: CUSTOMER
             key_columns:
-              - C_BIRTH_COUNTRY
-            name_column: C_BIRTH_COUNTRY
-          - unique_name: C_CUSTOMER_SK
-            label: C_CUSTOMER_SK
+              - C_MKTSEGMENT
+            name_column: C_MKTSEGMENT
+          - unique_name: CUSTOMER_NAME
+            label: CUSTOMER_NAME
+            description: testing comment for dimmension
             dataset: CUSTOMER
             key_columns:
-              - C_CUSTOMER_SK
-            name_column: C_CUSTOMER_SK
+              - C_NAME
+            name_column: C_NAME
+          - unique_name: CUSTOMER_NATION_NAME
+            label: CUSTOMER_NATION_NAME
+            dataset: NATION
+            key_columns:
+              - N_NAME
+            name_column: N_NAME
+          - unique_name: CUSTOMER_REGION_NAME
+            label: CUSTOMER_REGION_NAME
+            dataset: REGION
+            key_columns:
+              - R_NAME
+            name_column: R_NAME
 level_attributes:
   - unique_name: CUSTOMER_Level
     label: CUSTOMER
     dataset: CUSTOMER
     key_columns:
-      - C_CUSTOMER_SK
-    name_column: C_CUSTOMER_SK
+      - C_CUSTKEY
+    name_column: C_CUSTKEY
+relationships:
+  - unique_name: SYS_RELATIONSHIP_e51edfb4-30d0-4dd0-aaf6-d1d171e30b86
+    from:
+      dataset: CUSTOMER
+      hierarchy: CUSTOMER_dimension_default_hierarchy
+      join_columns:
+        - C_NATIONKEY
+      level: CUSTOMER_Level
+    to:
+      dimension: NATION_dimension
+      level: NATION_Level
+    type: embedded
 type: standard

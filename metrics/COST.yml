@@ -1,6 +1,0 @@
-unique_name: COST
-object_type: metric
-label: COST
-calculation_method: sum
-column: I_WHOLESALE_COST
-dataset: ITEM
