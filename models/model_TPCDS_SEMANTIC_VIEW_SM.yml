@@ -20,7 +20,7 @@ relationships:
         - SS_CUSTOMER_SK
     to:
       dimension: CUSTOMER_dimension
-      level: CUSTOMER
+      level: CUSTOMER_Level
   - unique_name: SALESTODATE
     from:
       dataset: STORESALES
@@ -28,7 +28,7 @@ relationships:
         - SS_SOLD_DATE_SK
     to:
       dimension: DATE_dimension
-      level: DATE
+      level: DATE_Level
   - unique_name: SALESTODEMO
     from:
       dataset: STORESALES
@@ -36,7 +36,7 @@ relationships:
         - SS_CDEMO_SK
     to:
       dimension: DEMO_dimension
-      level: DEMO
+      level: DEMO_Level
   - unique_name: SALESTOITEM
     from:
       dataset: STORESALES
@@ -44,7 +44,7 @@ relationships:
         - SS_ITEM_SK
     to:
       dimension: ITEM_dimension
-      level: ITEM
+      level: ITEM_Level
   - unique_name: SALETOSTORE
     from:
       dataset: STORESALES
@@ -52,4 +52,4 @@ relationships:
         - SS_STORE_SK
     to:
       dimension: STORE_dimension
-      level: STORE
+      level: STORE_Level
