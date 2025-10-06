@@ -26,7 +26,7 @@ hierarchies:
               - C_CUSTOMER_SK
             name_column: C_CUSTOMER_SK
 level_attributes:
-  - unique_name: CUSTOMER
+  - unique_name: CUSTOMER_Level
     label: CUSTOMER
     dataset: CUSTOMER
     key_columns:

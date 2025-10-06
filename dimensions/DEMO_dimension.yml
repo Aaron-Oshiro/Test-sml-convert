@@ -26,7 +26,7 @@ hierarchies:
               - MARITAL_STATUS
             name_column: MARITAL_STATUS
 level_attributes:
-  - unique_name: DEMO
+  - unique_name: DEMO_Level
     label: DEMO
     dataset: DEMO
     key_columns:

@@ -32,7 +32,7 @@ hierarchies:
               - I_ITEM_SK
             name_column: I_ITEM_SK
 level_attributes:
-  - unique_name: ITEM
+  - unique_name: ITEM_Level
     label: ITEM
     dataset: ITEM
     key_columns:

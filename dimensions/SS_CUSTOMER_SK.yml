@@ -9,7 +9,7 @@ hierarchies:
         secondary_attributes: []
 is_degenerate: true
 level_attributes:
-  - unique_name: SS_CUSTOMER_SK
+  - unique_name: SS_CUSTOMER_SK_Level
     label: SS_CUSTOMER_SK
     dataset: STORESALES
     key_columns:

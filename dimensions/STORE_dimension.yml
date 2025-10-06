@@ -38,7 +38,7 @@ hierarchies:
               - S_STORE_SK
             name_column: S_STORE_SK
 level_attributes:
-  - unique_name: STORE
+  - unique_name: STORE_Level
     label: STORE
     dataset: STORE
     key_columns:

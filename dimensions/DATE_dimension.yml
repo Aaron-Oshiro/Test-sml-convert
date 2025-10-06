@@ -38,7 +38,7 @@ hierarchies:
               - YEAR
             name_column: YEAR
 level_attributes:
-  - unique_name: DATE
+  - unique_name: DATE_Level
     label: DATE
     dataset: DATE
     key_columns:
