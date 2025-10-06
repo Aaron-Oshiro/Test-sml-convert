@@ -25,7 +25,7 @@ relationships:
         - C_NATIONKEY
     to:
       dimension: NATION_dimension
-      level: NATION
+      level: NATION_Level
   - unique_name: SYS_RELATIONSHIP_86a8691f-af7f-471b-83bb-192ee40668bd
     from:
       dataset: LINEITEM
@@ -41,7 +41,7 @@ relationships:
         - N_REGIONKEY
     to:
       dimension: REGION_dimension
-      level: REGION
+      level: REGION_Level
   - unique_name: SYS_RELATIONSHIP_4bb484d4-6900-4161-80fc-8b687cb6bfd1
     from:
       dataset: ORDERS
@@ -49,7 +49,7 @@ relationships:
         - O_CUSTKEY
     to:
       dimension: CUSTOMER_dimension
-      level: CUSTOMER
+      level: CUSTOMER_Level
   - unique_name: SYS_RELATIONSHIP_d1f3c90d-f09d-40ab-94d3-2d89e1b50f23
     from:
       dataset: SUPPLIER
@@ -58,3 +58,35 @@ relationships:
     to:
       dimension: NATION_dimension
       level: NATION_Level
+  - unique_name: NATION_to_self
+    from:
+      dataset: NATION
+      join_columns:
+        - N_NATIONKEY
+    to:
+      dimension: NATION_dimension
+      level: NATION_Level
+  - unique_name: ORDERS_to_self
+    from:
+      dataset: ORDERS
+      join_columns:
+        - O_ORDERKEY
+    to:
+      dimension: ORDERS_dimension
+      level: ORDERS_Level
+  - unique_name: REGION_to_self
+    from:
+      dataset: REGION
+      join_columns:
+        - R_REGIONKEY
+    to:
+      dimension: REGION_dimension
+      level: REGION_Level
+  - unique_name: CUSTOMER_to_self
+    from:
+      dataset: CUSTOMER
+      join_columns:
+        - C_CUSTKEY
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER_Level
