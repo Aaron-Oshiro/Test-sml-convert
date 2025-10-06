@@ -1,7 +1,0 @@
-unique_name: O_ORDERKEY
-object_type: metric
-label: O_ORDERKEY
-description: comment fact
-calculation_method: sum
-column: O_ORDERKEY
-dataset: ORDERS

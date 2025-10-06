@@ -1,6 +1,6 @@
 version: 1
-unique_name: tpch_analysis
+unique_name: TPCDS_SEMANTIC_VIEW_SM
 object_type: catalog
-label: tpch_analysis
+label: TPCDS_SEMANTIC_VIEW_SM
 aggressive_agg_promotion: false
 build_speculative_aggs: false

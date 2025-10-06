@@ -1,0 +1,6 @@
+unique_name: TOTALSALESQUANTITY
+object_type: metric
+label: TOTALSALESQUANTITY
+calculation_method: sum
+column: SS_QUANTITY
+dataset: STORESALES

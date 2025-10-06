@@ -1,0 +1,5 @@
+unique_name: TOTALCOST
+object_type: metric_calc
+label: TOTALCOST
+expression: '[Measures].[COST]'
+mdx_aggregate_function: SUM

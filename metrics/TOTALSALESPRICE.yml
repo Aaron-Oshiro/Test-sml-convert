@@ -1,0 +1,6 @@
+unique_name: TOTALSALESPRICE
+object_type: metric
+label: TOTALSALESPRICE
+calculation_method: sum
+column: SS_SALES_PRICE
+dataset: STORESALES
