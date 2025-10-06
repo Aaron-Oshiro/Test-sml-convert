@@ -7,54 +7,29 @@ hierarchies:
     levels:
       - unique_name: CUSTOMER
         secondary_attributes:
-          - unique_name: CUSTOMER_COUNTRY_CODE
-            label: CUSTOMER_COUNTRY_CODE
+          - unique_name: BIRTHYEAR
+            label: BIRTHYEAR
             dataset: CUSTOMER
             key_columns:
-              - CUSTOMER_COUNTRY_CODE
-            name_column: CUSTOMER_COUNTRY_CODE
-          - unique_name: CUSTOMER_MARKET_SEGMENT
-            label: CUSTOMER_MARKET_SEGMENT
+              - BIRTHYEAR
+            name_column: BIRTHYEAR
+          - unique_name: COUNTRY
+            label: COUNTRY
             dataset: CUSTOMER
             key_columns:
-              - C_MKTSEGMENT
-            name_column: C_MKTSEGMENT
-          - unique_name: CUSTOMER_NAME
-            label: CUSTOMER_NAME
-            description: testing comment for dimmension
+              - COUNTRY
+            name_column: COUNTRY
+          - unique_name: C_CUSTOMER_SK
+            label: C_CUSTOMER_SK
             dataset: CUSTOMER
             key_columns:
-              - C_NAME
-            name_column: C_NAME
-          - unique_name: CUSTOMER_NATION_NAME
-            label: CUSTOMER_NATION_NAME
-            dataset: NATION
-            key_columns:
-              - N_NAME
-            name_column: N_NAME
-          - unique_name: CUSTOMER_REGION_NAME
-            label: CUSTOMER_REGION_NAME
-            dataset: REGION
-            key_columns:
-              - R_NAME
-            name_column: R_NAME
+              - C_CUSTOMER_SK
+            name_column: C_CUSTOMER_SK
 level_attributes:
   - unique_name: CUSTOMER
     label: CUSTOMER
     dataset: CUSTOMER
     key_columns:
-      - C_CUSTKEY
-    name_column: C_CUSTKEY
-relationships:
-  - unique_name: SYS_RELATIONSHIP_03011894-8705-43cd-b685-c910e715cbae
-    from:
-      dataset: CUSTOMER
-      hierarchy: CUSTOMER_dimension_default_hierarchy
-      join_columns:
-        - C_NATIONKEY
-      level: CUSTOMER
-    to:
-      dimension: NATION_dimension
-      level: NATION
-    type: embedded
+      - C_CUSTOMER_SK
+    name_column: C_CUSTOMER_SK
 type: standard

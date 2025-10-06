@@ -1,0 +1,52 @@
+unique_name: STORESALES
+object_type: dataset
+label: STORESALES
+columns:
+  - name: SS_SOLD_DATE_SK
+    data_type: int
+  - name: SS_SOLD_TIME_SK
+    data_type: int
+  - name: SS_ITEM_SK
+    data_type: int
+  - name: SS_CUSTOMER_SK
+    data_type: int
+  - name: SS_CDEMO_SK
+    data_type: int
+  - name: SS_HDEMO_SK
+    data_type: int
+  - name: SS_ADDR_SK
+    data_type: int
+  - name: SS_STORE_SK
+    data_type: int
+  - name: SS_PROMO_SK
+    data_type: int
+  - name: SS_TICKET_NUMBER
+    data_type: int
+  - name: SS_QUANTITY
+    data_type: int
+  - name: SS_WHOLESALE_COST
+    data_type: int
+  - name: SS_LIST_PRICE
+    data_type: int
+  - name: SS_SALES_PRICE
+    data_type: int
+  - name: SS_EXT_DISCOUNT_AMT
+    data_type: int
+  - name: SS_EXT_SALES_PRICE
+    data_type: int
+  - name: SS_EXT_WHOLESALE_COST
+    data_type: int
+  - name: SS_EXT_LIST_PRICE
+    data_type: int
+  - name: SS_EXT_TAX
+    data_type: int
+  - name: SS_COUPON_AMT
+    data_type: int
+  - name: SS_NET_PAID
+    data_type: int
+  - name: SS_NET_PAID_INC_TAX
+    data_type: int
+  - name: SS_NET_PROFIT
+    data_type: int
+connection_id: connection_TPCDS_SF10TCL
+table: STORESALES

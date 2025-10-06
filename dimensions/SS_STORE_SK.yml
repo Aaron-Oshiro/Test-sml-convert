@@ -1,0 +1,17 @@
+unique_name: SS_STORE_SK
+object_type: dimension
+label: SS_STORE_SK
+hierarchies:
+  - unique_name: SS_STORE_SK_default_hierarchy
+    label: SS_STORE_SK Hierarchy
+    levels:
+      - unique_name: SS_STORE_SK
+        secondary_attributes: []
+is_degenerate: true
+level_attributes:
+  - unique_name: SS_STORE_SK
+    label: SS_STORE_SK
+    dataset: STORESALES
+    key_columns:
+      - ss_store_sk
+    name_column: ss_store_sk

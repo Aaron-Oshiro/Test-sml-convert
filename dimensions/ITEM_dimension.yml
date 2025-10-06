@@ -1,0 +1,41 @@
+unique_name: ITEM_dimension
+object_type: dimension
+label: ITEM
+hierarchies:
+  - unique_name: ITEM_dimension_default_hierarchy
+    label: ITEM Hierarchy
+    levels:
+      - unique_name: ITEM
+        secondary_attributes:
+          - unique_name: BRAND
+            label: BRAND
+            dataset: ITEM
+            key_columns:
+              - BRAND
+            name_column: BRAND
+          - unique_name: CATEGORY
+            label: CATEGORY
+            dataset: ITEM
+            key_columns:
+              - CATEGORY
+            name_column: CATEGORY
+          - unique_name: CLASS
+            label: CLASS
+            dataset: ITEM
+            key_columns:
+              - CLASS
+            name_column: CLASS
+          - unique_name: I_ITEM_SK
+            label: I_ITEM_SK
+            dataset: ITEM
+            key_columns:
+              - I_ITEM_SK
+            name_column: I_ITEM_SK
+level_attributes:
+  - unique_name: ITEM
+    label: ITEM
+    dataset: ITEM
+    key_columns:
+      - I_ITEM_SK
+    name_column: I_ITEM_SK
+type: standard

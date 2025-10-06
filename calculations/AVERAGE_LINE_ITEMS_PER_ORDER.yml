@@ -1,5 +1,0 @@
-unique_name: AVERAGE_LINE_ITEMS_PER_ORDER
-object_type: metric_calc
-label: AVERAGE_LINE_ITEMS_PER_ORDER
-expression: '[Measures].[COUNT_LINE_ITEMS]'
-mdx_aggregate_function: AVG

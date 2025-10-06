@@ -1,0 +1,6 @@
+unique_name: connection_TPCDS_SF10TCL
+object_type: connection
+label: connection_TPCDS_SF10TCL
+as_connection: con1
+database: SNOWFLAKE_SAMPLE_DATA
+schema: TPCDS_SF10TCL
