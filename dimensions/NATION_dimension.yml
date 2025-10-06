@@ -19,7 +19,6 @@ level_attributes:
     label: NATION
     description: testing comment for table
     dataset: NATION
-    is_hidden: true
     key_columns:
       - N_NATIONKEY
     name_column: N_NATIONKEY

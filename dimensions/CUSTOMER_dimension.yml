@@ -42,7 +42,6 @@ level_attributes:
   - unique_name: CUSTOMER_Level
     label: CUSTOMER
     dataset: CUSTOMER
-    is_hidden: true
     key_columns:
       - C_CUSTKEY
     name_column: C_CUSTKEY

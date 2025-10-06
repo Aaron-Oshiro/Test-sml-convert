@@ -17,7 +17,6 @@ level_attributes:
   - unique_name: ORDERS_Level
     label: ORDERS
     dataset: ORDERS
-    is_hidden: true
     key_columns:
       - O_ORDERKEY
     name_column: O_ORDERKEY
