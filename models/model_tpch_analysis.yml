@@ -18,6 +18,14 @@ metrics:
 partitions: []
 perspectives: []
 relationships:
+  - unique_name: SYS_RELATIONSHIP_e51edfb4-30d0-4dd0-aaf6-d1d171e30b86
+    from:
+      dataset: CUSTOMER
+      join_columns:
+        - C_NATIONKEY
+    to:
+      dimension: NATION_dimension
+      level: NATION
   - unique_name: SYS_RELATIONSHIP_86a8691f-af7f-471b-83bb-192ee40668bd
     from:
       dataset: LINEITEM
@@ -26,6 +34,22 @@ relationships:
     to:
       dimension: ORDERS_dimension
       level: ORDERS_Level
+  - unique_name: SYS_RELATIONSHIP_ccb83147-7776-4b95-a6a3-dcabd9e2469d
+    from:
+      dataset: NATION
+      join_columns:
+        - N_REGIONKEY
+    to:
+      dimension: REGION_dimension
+      level: REGION
+  - unique_name: SYS_RELATIONSHIP_4bb484d4-6900-4161-80fc-8b687cb6bfd1
+    from:
+      dataset: ORDERS
+      join_columns:
+        - O_CUSTKEY
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER
   - unique_name: SYS_RELATIONSHIP_d1f3c90d-f09d-40ab-94d3-2d89e1b50f23
     from:
       dataset: SUPPLIER
