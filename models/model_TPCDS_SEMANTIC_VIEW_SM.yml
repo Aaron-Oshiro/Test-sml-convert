@@ -67,20 +67,20 @@ relationships:
       level: CUSTOMER_Level
   - unique_name: DATE_to_self
     from:
-      dataset: DATE_DIM
+      dataset: DATE
       join_columns:
         - D_DATE_SK
     to:
-      dimension: DATE_DIM_dimension
-      level: DATE_DIM_Level
+      dimension: DATE_dimension
+      level: DATE_Level
   - unique_name: DEMO_to_self
     from:
-      dataset: CUSTOMER_DEMOGRAPHICS
+      dataset: DEMO
       join_columns:
         - CD_DEMO_SK
     to:
-      dimension: CUSTOMER_DEMOGRAPHICS_dimension
-      level: CUSTOMER_DEMOGRAPHICS_Level
+      dimension: DEMO_dimension
+      level: DEMO_Level
   - unique_name: ITEM_to_self
     from:
       dataset: ITEM
