@@ -49,4 +49,4 @@ columns:
   - name: SS_NET_PROFIT
     data_type: int
 connection_id: connection_TPCDS_SF10TCL
-table: '"STORE_SALES"'
+table: STORE_SALES

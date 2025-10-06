@@ -27,4 +27,4 @@ columns:
     data_type: string
     sql: CD_MARITAL_STATUS
 connection_id: connection_TPCDS_SF10TCL
-table: '"CUSTOMER_DEMOGRAPHICS"'
+table: CUSTOMER_DEMOGRAPHICS

@@ -56,4 +56,4 @@ columns:
     data_type: string
     sql: I_CLASS
 connection_id: connection_TPCDS_SF10TCL
-table: '"ITEM"'
+table: ITEM
