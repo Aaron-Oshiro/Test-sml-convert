@@ -24,7 +24,7 @@ level_attributes:
       - N_NATIONKEY
     name_column: N_NATIONKEY
 relationships:
-  - unique_name: SYS_RELATIONSHIP_f01325a9-da9f-411c-8069-d54764bda1df
+  - unique_name: SYS_RELATIONSHIP_ccb83147-7776-4b95-a6a3-dcabd9e2469d
     from:
       dataset: NATION
       hierarchy: NATION_dimension_default_hierarchy

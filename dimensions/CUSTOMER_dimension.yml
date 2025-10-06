@@ -47,7 +47,7 @@ level_attributes:
       - C_CUSTKEY
     name_column: C_CUSTKEY
 relationships:
-  - unique_name: SYS_RELATIONSHIP_58cebbc3-ad50-43f2-a7e7-8477f9ce3392
+  - unique_name: SYS_RELATIONSHIP_e51edfb4-30d0-4dd0-aaf6-d1d171e30b86
     from:
       dataset: CUSTOMER
       hierarchy: CUSTOMER_dimension_default_hierarchy
