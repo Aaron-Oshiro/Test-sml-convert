@@ -1,0 +1,5 @@
+unique_name: AVG_SUPPLIER_COUNT
+object_type: metric_calc
+label: AVG_SUPPLIER_COUNT
+expression: '[Measures].[COUNT_LINE_ITEMS]'
+mdx_aggregate_function: COUNT
