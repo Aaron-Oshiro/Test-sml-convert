@@ -1,0 +1,6 @@
+unique_name: COUNT_LINE_ITEMS
+object_type: metric
+label: COUNT_LINE_ITEMS
+calculation_method: count non-null
+column: LINE_ITEM_ID
+dataset: LINEITEM

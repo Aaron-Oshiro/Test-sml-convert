@@ -4,6 +4,8 @@ label: TPCH_ANALYSIS
 dimensions:
   - LINE_ITEM_ID
 metrics:
+  - unique_name: C_CUSTOMER_ORDER_COUNT
+  - unique_name: COUNT_LINE_ITEMS
   - unique_name: CUSTOMER_COUNT
   - unique_name: ORDER_AVERAGE_VALUE
   - unique_name: ORDER_COUNT
