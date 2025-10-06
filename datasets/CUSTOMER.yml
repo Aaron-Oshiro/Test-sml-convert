@@ -45,4 +45,4 @@ columns:
     data_type: string
     sql: C_BIRTH_COUNTRY
 connection_id: connection_TPCDS_SF10TCL
-table: CUSTOMER
+table: '"CUSTOMER"'

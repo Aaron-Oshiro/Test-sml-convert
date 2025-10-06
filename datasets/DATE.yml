@@ -71,4 +71,4 @@ columns:
     data_type: int
     sql: D_YEAR
 connection_id: connection_TPCDS_SF10TCL
-table: DATE
+table: '"DATE_DIM"'

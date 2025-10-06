@@ -73,4 +73,4 @@ columns:
     data_type: string
     sql: S_COUNTRY
 connection_id: connection_TPCDS_SF10TCL
-table: STORE
+table: '"STORE"'
