@@ -1,0 +1,6 @@
+unique_name: TAX_RATE
+object_type: metric
+label: TAX_RATE
+calculation_method: sum
+column: S_TAX_PRECENTAGE
+dataset: STORE

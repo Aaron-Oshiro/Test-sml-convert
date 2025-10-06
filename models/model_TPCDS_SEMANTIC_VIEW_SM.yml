@@ -8,6 +8,10 @@ dimensions:
   - SS_SOLD_DATE_SK
   - SS_STORE_SK
 metrics:
+  - unique_name: COST
+  - unique_name: PRICE
+  - unique_name: TAX_RATE
+  - unique_name: TOTALCOST
   - unique_name: TOTALSALESPRICE
   - unique_name: TOTALSALESQUANTITY
 partitions: []
