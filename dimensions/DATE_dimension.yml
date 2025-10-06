@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: DATE_dimension_default_hierarchy
     label: DATE Hierarchy
     levels:
-      - unique_name: DATE
+      - unique_name: DATE_Level
         secondary_attributes:
           - unique_name: DATE
             label: DATE

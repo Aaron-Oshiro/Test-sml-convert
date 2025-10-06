@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: CUSTOMER_dimension_default_hierarchy
     label: CUSTOMER Hierarchy
     levels:
-      - unique_name: CUSTOMER
+      - unique_name: CUSTOMER_Level
         secondary_attributes:
           - unique_name: BIRTHYEAR
             label: BIRTHYEAR

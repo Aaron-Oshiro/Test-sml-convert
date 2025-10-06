@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: STORE_dimension_default_hierarchy
     label: STORE Hierarchy
     levels:
-      - unique_name: STORE
+      - unique_name: STORE_Level
         secondary_attributes:
           - unique_name: MARKET
             label: MARKET

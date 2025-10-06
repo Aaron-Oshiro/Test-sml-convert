@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: SS_SOLD_DATE_SK_default_hierarchy
     label: SS_SOLD_DATE_SK Hierarchy
     levels:
-      - unique_name: SS_SOLD_DATE_SK
+      - unique_name: SS_SOLD_DATE_SK_Level
         secondary_attributes: []
 is_degenerate: true
 level_attributes:
@@ -13,5 +13,5 @@ level_attributes:
     label: SS_SOLD_DATE_SK
     dataset: STORESALES
     key_columns:
-      - ss_sold_date_sk
-    name_column: ss_sold_date_sk
+      - SS_SOLD_DATE_SK
+    name_column: SS_SOLD_DATE_SK

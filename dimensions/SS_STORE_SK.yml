@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: SS_STORE_SK_default_hierarchy
     label: SS_STORE_SK Hierarchy
     levels:
-      - unique_name: SS_STORE_SK
+      - unique_name: SS_STORE_SK_Level
         secondary_attributes: []
 is_degenerate: true
 level_attributes:
@@ -13,5 +13,5 @@ level_attributes:
     label: SS_STORE_SK
     dataset: STORESALES
     key_columns:
-      - ss_store_sk
-    name_column: ss_store_sk
+      - SS_STORE_SK
+    name_column: SS_STORE_SK

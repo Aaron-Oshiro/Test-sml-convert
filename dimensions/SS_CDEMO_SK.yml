@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: SS_CDEMO_SK_default_hierarchy
     label: SS_CDEMO_SK Hierarchy
     levels:
-      - unique_name: SS_CDEMO_SK
+      - unique_name: SS_CDEMO_SK_Level
         secondary_attributes: []
 is_degenerate: true
 level_attributes:
@@ -13,5 +13,5 @@ level_attributes:
     label: SS_CDEMO_SK
     dataset: STORESALES
     key_columns:
-      - ss_cdemo_sk
-    name_column: ss_cdemo_sk
+      - SS_CDEMO_SK
+    name_column: SS_CDEMO_SK

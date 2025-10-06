@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: ITEM_dimension_default_hierarchy
     label: ITEM Hierarchy
     levels:
-      - unique_name: ITEM
+      - unique_name: ITEM_Level
         secondary_attributes:
           - unique_name: BRAND
             label: BRAND

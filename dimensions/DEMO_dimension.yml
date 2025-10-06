@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: DEMO_dimension_default_hierarchy
     label: DEMO Hierarchy
     levels:
-      - unique_name: DEMO
+      - unique_name: DEMO_Level
         secondary_attributes:
           - unique_name: CD_DEMO_SK
             label: CD_DEMO_SK

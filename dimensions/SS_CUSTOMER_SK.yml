@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: SS_CUSTOMER_SK_default_hierarchy
     label: SS_CUSTOMER_SK Hierarchy
     levels:
-      - unique_name: SS_CUSTOMER_SK
+      - unique_name: SS_CUSTOMER_SK_Level
         secondary_attributes: []
 is_degenerate: true
 level_attributes:
@@ -13,5 +13,5 @@ level_attributes:
     label: SS_CUSTOMER_SK
     dataset: STORESALES
     key_columns:
-      - ss_customer_sk
-    name_column: ss_customer_sk
+      - SS_CUSTOMER_SK
+    name_column: SS_CUSTOMER_SK
