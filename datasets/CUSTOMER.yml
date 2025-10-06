@@ -2,47 +2,24 @@ unique_name: CUSTOMER
 object_type: dataset
 label: CUSTOMER
 columns:
-  - name: C_CUSTOMER_SK
+  - name: C_CUSTKEY
     data_type: int
-  - name: C_CUSTOMER_ID
+  - name: C_NAME
     data_type: string
-  - name: C_CURRENT_CDEMO_SK
+  - name: C_ADDRESS
+    data_type: string
+  - name: C_NATIONKEY
     data_type: int
-  - name: C_CURRENT_HDEMO_SK
+  - name: C_PHONE
+    data_type: string
+  - name: C_ACCTBAL
     data_type: int
-  - name: C_CURRENT_ADDR_SK
-    data_type: int
-  - name: C_FIRST_SHIPTO_DATE_SK
-    data_type: int
-  - name: C_FIRST_SALES_DATE_SK
-    data_type: int
-  - name: C_SALUTATION
+  - name: C_MKTSEGMENT
     data_type: string
-  - name: C_FIRST_NAME
+  - name: C_COMMENT
     data_type: string
-  - name: C_LAST_NAME
+  - name: CUSTOMER_COUNTRY_CODE
     data_type: string
-  - name: C_PREFERRED_CUST_FLAG
-    data_type: string
-  - name: C_BIRTH_DAY
-    data_type: int
-  - name: C_BIRTH_MONTH
-    data_type: int
-  - name: C_BIRTH_YEAR
-    data_type: int
-  - name: C_BIRTH_COUNTRY
-    data_type: string
-  - name: C_LOGIN
-    data_type: string
-  - name: C_EMAIL_ADDRESS
-    data_type: string
-  - name: C_LAST_REVIEW_DATE
-    data_type: string
-  - name: BIRTHYEAR
-    data_type: int
-    sql: C_BIRTH_YEAR
-  - name: COUNTRY
-    data_type: string
-    sql: C_BIRTH_COUNTRY
-connection_id: connection_TPCDS_SF10TCL
+    sql: LEFT(C_PHONE, 2)
+connection_id: connection_TPCH_SF1
 table: CUSTOMER

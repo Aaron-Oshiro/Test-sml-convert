@@ -1,0 +1,35 @@
+unique_name: ORDERS_dimension
+object_type: dimension
+label: ORDERS
+hierarchies:
+  - unique_name: ORDERS_dimension_default_hierarchy
+    label: ORDERS Hierarchy
+    levels:
+      - unique_name: ORDERS_Level
+        secondary_attributes:
+          - unique_name: ORDER_DATE
+            label: ORDER_DATE
+            dataset: ORDERS
+            key_columns:
+              - O_ORDERDATE
+            name_column: O_ORDERDATE
+level_attributes:
+  - unique_name: ORDERS_Level
+    label: ORDERS
+    dataset: ORDERS
+    key_columns:
+      - O_ORDERKEY
+    name_column: O_ORDERKEY
+relationships:
+  - unique_name: SYS_RELATIONSHIP_32c02ecc-8f08-43c0-b707-378ac6b5fae9
+    from:
+      dataset: ORDERS
+      hierarchy: ORDERS_dimension_default_hierarchy
+      join_columns:
+        - O_CUSTKEY
+      level: ORDERS_Level
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER_Level
+    type: embedded
+type: standard

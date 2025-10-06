@@ -1,0 +1,36 @@
+unique_name: model_tpch_analysis
+object_type: model
+label: tpch_analysis
+description: comment_about_semantic_view
+dimensions:
+  - LINE_ITEM_ID
+metrics:
+  - unique_name: C_CUSTOMER_ORDER_COUNT
+  - unique_name: COUNT_LINE_ITEMS
+  - unique_name: O_ORDERKEY
+  - unique_name: CUSTOMER_COUNT
+  - unique_name: CUSTOMER_ORDER_COUNT
+  - unique_name: AVERAGE_LINE_ITEMS_PER_ORDER
+  - unique_name: AVG_SUPPLIER_COUNT
+  - unique_name: ORDER_AVERAGE_VALUE
+  - unique_name: ORDER_COUNT
+  - unique_name: SUPPLIER_COUNT
+partitions: []
+perspectives: []
+relationships:
+  - unique_name: SYS_RELATIONSHIP_11519616-6904-4b26-b62e-ee385299e945
+    from:
+      dataset: LINEITEM
+      join_columns:
+        - L_ORDERKEY
+    to:
+      dimension: ORDERS_dimension
+      level: ORDERS_Level
+  - unique_name: SYS_RELATIONSHIP_4697c958-09f9-46fd-800c-56fad2b4331f
+    from:
+      dataset: SUPPLIER
+      join_columns:
+        - S_NATIONKEY
+    to:
+      dimension: NATION_dimension
+      level: NATION_Level

@@ -1,6 +1,0 @@
-unique_name: PRICE
-object_type: metric
-label: PRICE
-calculation_method: sum
-column: I_CURRENT_PRICE
-dataset: ITEM

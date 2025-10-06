@@ -1,0 +1,17 @@
+unique_name: LINE_ITEM_ID
+object_type: dimension
+label: LINE_ITEM_ID
+hierarchies:
+  - unique_name: LINE_ITEM_ID_default_hierarchy
+    label: LINE_ITEM_ID Hierarchy
+    levels:
+      - unique_name: LINE_ITEM_ID_Level
+        secondary_attributes: []
+is_degenerate: true
+level_attributes:
+  - unique_name: LINE_ITEM_ID_Level
+    label: LINE_ITEM_ID
+    dataset: LINEITEM
+    key_columns:
+      - LINE_ITEM_ID
+    name_column: LINE_ITEM_ID
