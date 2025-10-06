@@ -7,7 +7,6 @@ dimensions:
 metrics:
   - unique_name: C_CUSTOMER_ORDER_COUNT
   - unique_name: COUNT_LINE_ITEMS
-  - unique_name: O_ORDERKEY
   - unique_name: CUSTOMER_COUNT
   - unique_name: CUSTOMER_ORDER_COUNT
   - unique_name: AVERAGE_LINE_ITEMS_PER_ORDER

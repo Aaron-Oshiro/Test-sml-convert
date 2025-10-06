@@ -18,6 +18,7 @@ level_attributes:
   - unique_name: REGION_Level
     label: REGION
     dataset: REGION
+    is_hidden: true
     key_columns:
       - R_REGIONKEY
     name_column: R_REGIONKEY

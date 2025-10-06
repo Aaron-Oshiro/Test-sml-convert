@@ -13,10 +13,18 @@ hierarchies:
             key_columns:
               - O_ORDERDATE
             name_column: O_ORDERDATE
+          - unique_name: O_ORDERKEY
+            label: O_ORDERKEY
+            description: comment fact
+            dataset: ORDERS
+            key_columns:
+              - O_ORDERKEY
+            name_column: O_ORDERKEY
 level_attributes:
   - unique_name: ORDERS_Level
     label: ORDERS
     dataset: ORDERS
+    is_hidden: true
     key_columns:
       - O_ORDERKEY
     name_column: O_ORDERKEY
