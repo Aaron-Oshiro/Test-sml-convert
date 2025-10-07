@@ -2,51 +2,51 @@ unique_name: dim_time_dataset
 object_type: dataset
 label: dim_time_dataset
 columns:
-  - name: pk_date
+  - name: PK_DATE
     data_type: datetime
-  - name: datekey
+  - name: DATEKEY
     data_type: int
-  - name: date_name
+  - name: DATE_NAME
     data_type: string
-  - name: year
+  - name: YEAR
     data_type: string
-  - name: year_name
+  - name: YEAR_NAME
     data_type: string
-  - name: half_year
+  - name: HALF_YEAR
     data_type: date
-  - name: half_year_name
+  - name: HALF_YEAR_NAME
     data_type: string
-  - name: quarter
+  - name: QUARTER
     data_type: date
-  - name: quarter_name
+  - name: QUARTER_NAME
     data_type: string
-  - name: month
+  - name: MONTH
     data_type: date
-  - name: month_name
+  - name: MONTH_NAME
     data_type: string
-  - name: week
+  - name: WEEK
     data_type: date
-  - name: week_name
+  - name: WEEK_NAME
     data_type: string
-  - name: day_of_year
+  - name: DAY_OF_YEAR
     data_type: int
-  - name: day_of_year_name
+  - name: DAY_OF_YEAR_NAME
     data_type: string
-  - name: day_of_week
+  - name: DAY_OF_WEEK
     data_type: int
-  - name: day_of_week_name
+  - name: DAY_OF_WEEK_NAME
     data_type: string
-  - name: week_of_year
+  - name: WEEK_OF_YEAR
     data_type: int
-  - name: week_of_year_name
+  - name: WEEK_OF_YEAR_NAME
     data_type: string
-  - name: month_of_year
+  - name: MONTH_OF_YEAR
     data_type: int
-  - name: month_of_year_name
+  - name: MONTH_OF_YEAR_NAME
     data_type: string
-  - name: quarter_of_year
+  - name: QUARTER_OF_YEAR
     data_type: int
-  - name: quarter_of_year_name
+  - name: QUARTER_OF_YEAR_NAME
     data_type: string
 connection_id: connection_AO
 sql: |-
