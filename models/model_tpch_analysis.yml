@@ -17,6 +17,24 @@ metrics:
 partitions: []
 perspectives: []
 relationships:
+  - unique_name: ORDERS_Date Dimension_orders.o_orderdate
+    from:
+      dataset: ORDERS
+      join_columns:
+        - orders.o_orderdate
+    role_play: orders.o_orderdate {0}
+    to:
+      dimension: Date Dimension
+      level: DayMonth
+  - unique_name: ORDERS_Date Dimension_O_ORDERDATE
+    from:
+      dataset: ORDERS
+      join_columns:
+        - O_ORDERDATE
+    role_play: O_ORDERDATE {0}
+    to:
+      dimension: Date Dimension
+      level: DayMonth
   - unique_name: SYS_RELATIONSHIP_e51edfb4-30d0-4dd0-aaf6-d1d171e30b86
     from:
       dataset: CUSTOMER

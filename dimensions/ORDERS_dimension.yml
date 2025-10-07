@@ -7,12 +7,6 @@ hierarchies:
     levels:
       - unique_name: ORDERS_Level
         secondary_attributes:
-          - unique_name: ORDER_DATE
-            label: ORDER_DATE
-            dataset: ORDERS
-            key_columns:
-              - O_ORDERDATE
-            name_column: O_ORDERDATE
           - unique_name: O_ORDERKEY
             label: O_ORDERKEY
             description: comment fact
