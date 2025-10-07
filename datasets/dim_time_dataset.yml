@@ -48,7 +48,7 @@ columns:
     data_type: int
   - name: quarter_of_year_name
     data_type: string
-connection_id: connection_TPCH_SF1
+connection_id: connection_AO
 sql: |-
   SELECT DATE_DAY::TIMESTAMP as PK_DATE,
             cast(to_char(DATE_DAY, '%Y%m%d') as decimal) as DATEKEY,
@@ -73,4 +73,4 @@ sql: |-
             MONTHNAME(DATE_DAY) as MONTH_OF_YEAR_NAME,
             EXTRACT(QUARTER from DATE_DAY) as QUARTER_OF_YEAR,
             concat('Quarter ', EXTRACT(QUARTER from DATE_DAY)) as QUARTER_OF_YEAR_NAME
-            FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.METRICFLOW_TIME_SPINE
+            FROM TEST_AO.PUBLIC.METRICFLOW_TIME_SPINE

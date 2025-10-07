@@ -1,0 +1,6 @@
+unique_name: connection_AO
+object_type: connection
+label: connection_AO
+as_connection: con1
+database: TEST_AO
+schema: PUBLIC
