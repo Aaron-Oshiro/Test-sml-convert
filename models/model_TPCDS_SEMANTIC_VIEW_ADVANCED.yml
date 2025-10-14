@@ -1,6 +1,10 @@
 unique_name: model_TPCDS_SEMANTIC_VIEW_ADVANCED
 object_type: model
 label: TPCDS_SEMANTIC_VIEW_ADVANCED
+description: >-
+
+  Extension: {"custom_instructions":"For questions that don't specify a time
+  period, show data for all time."}
 dimensions: []
 metrics:
   - unique_name: F_REVENUE_PER_CUSTOMER
@@ -8,7 +12,6 @@ metrics:
   - unique_name: TOTAL_COST
   - unique_name: TOTAL_SALES_PRICE
   - unique_name: TOTAL_SALES_QUANTITY
-  - unique_name: TOTAL_SALES_QUANTITY_30DAY
   - unique_name: AVG_7_DAYS_SALES_QUANTITY
   - unique_name: AVG_7_DAYS_SALES_QUANTITY_30DAY
 partitions: []
