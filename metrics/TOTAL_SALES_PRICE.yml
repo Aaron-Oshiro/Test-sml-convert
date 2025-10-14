@@ -1,0 +1,7 @@
+unique_name: TOTAL_SALES_PRICE
+object_type: metric
+label: TOTAL_SALES_PRICE
+description: '{"synonyms": ["total of sales price"]}'
+calculation_method: sum
+column: SS_SALES_PRICE
+dataset: STORESALES

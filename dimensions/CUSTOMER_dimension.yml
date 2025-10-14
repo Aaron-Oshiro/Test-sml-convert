@@ -7,55 +7,42 @@ hierarchies:
     levels:
       - unique_name: CUSTOMER_Level
         secondary_attributes:
-          - unique_name: CUSTOMER_COUNTRY_CODE
-            label: CUSTOMER_COUNTRY_CODE
+          - unique_name: AGE
+            label: AGE
             dataset: CUSTOMER
             key_columns:
-              - CUSTOMER_COUNTRY_CODE
-            name_column: CUSTOMER_COUNTRY_CODE
-          - unique_name: CUSTOMER_MARKET_SEGMENT
-            label: CUSTOMER_MARKET_SEGMENT
+              - AGE
+            name_column: AGE
+          - unique_name: AGE_BUCKET
+            label: AGE_BUCKET
             dataset: CUSTOMER
             key_columns:
-              - C_MKTSEGMENT
-            name_column: C_MKTSEGMENT
-          - unique_name: CUSTOMER_NAME
-            label: CUSTOMER_NAME
-            description: testing comment for dimmension
+              - AGE_BUCKET
+            name_column: AGE_BUCKET
+          - unique_name: BIRTHYEAR
+            label: BIRTHYEAR
             dataset: CUSTOMER
             key_columns:
-              - C_NAME
-            name_column: C_NAME
-          - unique_name: CUSTOMER_NATION_NAME
-            label: CUSTOMER_NATION_NAME
-            dataset: NATION
+              - C_BIRTH_YEAR
+            name_column: C_BIRTH_YEAR
+          - unique_name: COUNTRY
+            label: COUNTRY
+            dataset: CUSTOMER
             key_columns:
-              - N_NAME
-            name_column: N_NAME
-          - unique_name: CUSTOMER_REGION_NAME
-            label: CUSTOMER_REGION_NAME
-            dataset: REGION
+              - C_BIRTH_COUNTRY
+            name_column: C_BIRTH_COUNTRY
+          - unique_name: VALUE_BUCKET
+            label: VALUE_BUCKET
+            dataset: CUSTOMER
             key_columns:
-              - R_NAME
-            name_column: R_NAME
+              - VALUE_BUCKET
+            name_column: VALUE_BUCKET
 level_attributes:
   - unique_name: CUSTOMER_Level
     label: CUSTOMER
     dataset: CUSTOMER
     is_hidden: true
     key_columns:
-      - C_CUSTKEY
-    name_column: C_CUSTKEY
-relationships:
-  - unique_name: SYS_RELATIONSHIP_e51edfb4-30d0-4dd0-aaf6-d1d171e30b86
-    from:
-      dataset: CUSTOMER
-      hierarchy: CUSTOMER_dimension_default_hierarchy
-      join_columns:
-        - C_NATIONKEY
-      level: CUSTOMER_Level
-    to:
-      dimension: NATION_dimension
-      level: NATION_Level
-    type: embedded
+      - C_CUSTOMER_SK
+    name_column: C_CUSTOMER_SK
 type: standard

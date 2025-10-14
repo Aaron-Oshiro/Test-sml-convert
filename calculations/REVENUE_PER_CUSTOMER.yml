@@ -1,0 +1,6 @@
+unique_name: REVENUE_PER_CUSTOMER
+object_type: metric_calc
+label: REVENUE_PER_CUSTOMER
+expression: >-
+  0 /*TODO: Rewrite in MDX. Original SQL: (SUM(SS_QUANTITY)/COUNT(DISTINCT
+  SS_CUSTOMER_SK))*/

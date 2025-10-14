@@ -1,0 +1,7 @@
+unique_name: NET_PROFIT__MARGIN_AFTER_TAX
+object_type: metric_calc
+label: NET_PROFIT__MARGIN_AFTER_TAX
+expression: >-
+  0 /*TODO: Rewrite in MDX. Original SQL:
+  SUM((STORESALES.SS_SALES_PRICE-item.cost)/item.cost)/SUM(STORESALES.SS_QUANTITY)*/
+mdx_aggregate_function: SUM

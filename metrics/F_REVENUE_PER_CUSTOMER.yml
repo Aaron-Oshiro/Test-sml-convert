@@ -1,0 +1,9 @@
+unique_name: F_REVENUE_PER_CUSTOMER
+object_type: metric
+label: F_REVENUE_PER_CUSTOMER
+description: >-
+  {"synonyms": ["customer LTV","customer lifetime value","total revenue per
+  customer"]}
+calculation_method: sum
+column: F_SALES_PRICE
+dataset: STORESALES
