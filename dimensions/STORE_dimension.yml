@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: STORE_dimension_default_hierarchy
     label: STORE Hierarchy
     levels:
-      - unique_name: STORE_Level
+      - unique_name: STORE_level
         secondary_attributes:
           - unique_name: MARKET
             label: MARKET
@@ -32,7 +32,7 @@ hierarchies:
               - S_COUNTRY
             name_column: S_COUNTRY
 level_attributes:
-  - unique_name: STORE_Level
+  - unique_name: STORE_level
     label: STORE
     dataset: STORE
     is_hidden: true

@@ -1,7 +1,0 @@
-unique_name: NET_SALES_PROFIT_AFTER_TAX
-object_type: metric_calc
-label: NET_SALES_PROFIT_AFTER_TAX
-expression: >-
-  0 /*TODO: Rewrite in MDX. Original SQL:
-  SUM((STORESALES.SS_SALES_PRICE-item.cost)*(1-STORE.TAX_RATE))*/
-mdx_aggregate_function: SUM

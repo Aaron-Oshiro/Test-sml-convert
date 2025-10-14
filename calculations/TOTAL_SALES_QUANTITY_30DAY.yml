@@ -1,6 +1,7 @@
 unique_name: TOTAL_SALES_QUANTITY_30DAY
 object_type: metric_calc
 label: TOTAL_SALES_QUANTITY_30DAY
-expression: |-
-  0 /*TODO: Rewrite in MDX. Original SQL: LAG(TOTAL_SALES_QUANTITY,30)
+expression: >-
+  [Measures].[TOTAL_SALES_QUANTITY].Lag(30) /*TODO: Rewrite in MDX. Original
+  SQL: LAG(TOTAL_SALES_QUANTITY,30)
            OVER (PARTITION BY EXCLUDING DATE.DATE ORDER BY DATE.DATE)*/

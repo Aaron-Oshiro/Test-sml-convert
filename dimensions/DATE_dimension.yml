@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: DATE_dimension_default_hierarchy
     label: DATE Hierarchy
     levels:
-      - unique_name: DATE_Level
+      - unique_name: DATE_level
         secondary_attributes:
           - unique_name: MONTH
             label: MONTH
@@ -26,7 +26,7 @@ hierarchies:
               - D_YEAR
             name_column: D_YEAR
 level_attributes:
-  - unique_name: DATE_Level
+  - unique_name: DATE_level
     label: DATE
     dataset: DATE
     is_hidden: true

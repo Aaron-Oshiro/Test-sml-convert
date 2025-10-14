@@ -4,16 +4,13 @@ label: TPCDS_SEMANTIC_VIEW_ADVANCED
 dimensions: []
 metrics:
   - unique_name: F_REVENUE_PER_CUSTOMER
-  - unique_name: AVG_7_DAYS_SALES_QUANTITY
-  - unique_name: AVG_7_DAYS_SALES_QUANTITY_30DAY
   - unique_name: CUSTOMER_COUNT
-  - unique_name: NET_PROFIT__MARGIN_AFTER_TAX
-  - unique_name: NET_SALES_PROFIT_AFTER_TAX
-  - unique_name: REVENUE_PER_CUSTOMER
   - unique_name: TOTAL_COST
   - unique_name: TOTAL_SALES_PRICE
   - unique_name: TOTAL_SALES_QUANTITY
   - unique_name: TOTAL_SALES_QUANTITY_30DAY
+  - unique_name: AVG_7_DAYS_SALES_QUANTITY
+  - unique_name: AVG_7_DAYS_SALES_QUANTITY_30DAY
 partitions: []
 perspectives: []
 relationships:
@@ -33,7 +30,7 @@ relationships:
         - SS_CUSTOMER_SK
     to:
       dimension: CUSTOMER_dimension
-      level: CUSTOMER_Level
+      level: CUSTOMER_level
   - unique_name: SALESTODATE
     from:
       dataset: STORESALES
@@ -41,7 +38,7 @@ relationships:
         - SS_SOLD_DATE_SK
     to:
       dimension: DATE_dimension
-      level: DATE_Level
+      level: DATE_level
   - unique_name: SALESTODEMO
     from:
       dataset: STORESALES
@@ -49,7 +46,7 @@ relationships:
         - SS_CDEMO_SK
     to:
       dimension: DEMO_dimension
-      level: DEMO_Level
+      level: DEMO_level
   - unique_name: SALESTOITEM
     from:
       dataset: STORESALES
@@ -57,7 +54,7 @@ relationships:
         - SS_ITEM_SK
     to:
       dimension: ITEM_dimension
-      level: ITEM_Level
+      level: ITEM_level
   - unique_name: SALETOSTORE
     from:
       dataset: STORESALES
@@ -65,7 +62,7 @@ relationships:
         - SS_STORE_SK
     to:
       dimension: STORE_dimension
-      level: STORE_Level
+      level: STORE_level
   - unique_name: CUSTOMER_to_self
     from:
       dataset: CUSTOMER
@@ -73,7 +70,7 @@ relationships:
         - C_CUSTOMER_SK
     to:
       dimension: CUSTOMER_dimension
-      level: CUSTOMER_Level
+      level: CUSTOMER_level
   - unique_name: DATE_to_self
     from:
       dataset: DATE
@@ -81,7 +78,7 @@ relationships:
         - D_DATE_SK
     to:
       dimension: DATE_dimension
-      level: DATE_Level
+      level: DATE_level
   - unique_name: DEMO_to_self
     from:
       dataset: DEMO
@@ -89,7 +86,7 @@ relationships:
         - CD_DEMO_SK
     to:
       dimension: DEMO_dimension
-      level: DEMO_Level
+      level: DEMO_level
   - unique_name: ITEM_to_self
     from:
       dataset: ITEM
@@ -97,7 +94,7 @@ relationships:
         - I_ITEM_SK
     to:
       dimension: ITEM_dimension
-      level: ITEM_Level
+      level: ITEM_level
   - unique_name: STORE_to_self
     from:
       dataset: STORE
@@ -105,4 +102,4 @@ relationships:
         - S_STORE_SK
     to:
       dimension: STORE_dimension
-      level: STORE_Level
+      level: STORE_level

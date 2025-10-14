@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: DEMO_dimension_default_hierarchy
     label: DEMO Hierarchy
     levels:
-      - unique_name: DEMO_Level
+      - unique_name: DEMO_level
         secondary_attributes:
           - unique_name: CREDIT_RATING
             label: CREDIT_RATING
@@ -20,7 +20,7 @@ hierarchies:
               - CD_MARITAL_STATUS
             name_column: CD_MARITAL_STATUS
 level_attributes:
-  - unique_name: DEMO_Level
+  - unique_name: DEMO_level
     label: DEMO
     dataset: DEMO
     is_hidden: true

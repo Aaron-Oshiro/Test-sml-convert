@@ -5,7 +5,7 @@ hierarchies:
   - unique_name: CUSTOMER_dimension_default_hierarchy
     label: CUSTOMER Hierarchy
     levels:
-      - unique_name: CUSTOMER_Level
+      - unique_name: CUSTOMER_level
         secondary_attributes:
           - unique_name: AGE
             label: AGE
@@ -38,7 +38,7 @@ hierarchies:
               - VALUE_BUCKET
             name_column: VALUE_BUCKET
 level_attributes:
-  - unique_name: CUSTOMER_Level
+  - unique_name: CUSTOMER_level
     label: CUSTOMER
     dataset: CUSTOMER
     is_hidden: true
