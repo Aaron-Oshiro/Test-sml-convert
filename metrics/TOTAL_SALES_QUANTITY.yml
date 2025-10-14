@@ -1,7 +1,0 @@
-unique_name: TOTAL_SALES_QUANTITY
-object_type: metric
-label: TOTAL_SALES_QUANTITY
-description: '{"synonyms": ["total sales quantity"]}'
-calculation_method: sum
-column: SS_QUANTITY
-dataset: STORESALES

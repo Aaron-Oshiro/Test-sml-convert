@@ -1,7 +1,0 @@
-unique_name: TOTAL_COST
-object_type: metric
-label: TOTAL_COST
-description: '{"synonyms": ["total cost of sold items"]}'
-calculation_method: sum
-column: COST
-dataset: ITEM

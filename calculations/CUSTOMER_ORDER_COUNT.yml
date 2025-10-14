@@ -1,0 +1,5 @@
+unique_name: CUSTOMER_ORDER_COUNT
+object_type: metric_calc
+label: CUSTOMER_ORDER_COUNT
+expression: '[Measures].[C_CUSTOMER_ORDER_COUNT]'
+mdx_aggregate_function: SUM

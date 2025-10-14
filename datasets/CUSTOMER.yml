@@ -2,63 +2,24 @@ unique_name: CUSTOMER
 object_type: dataset
 label: CUSTOMER
 columns:
-  - name: C_CUSTOMER_SK
+  - name: C_CUSTKEY
     data_type: decimal
-  - name: C_CUSTOMER_ID
+  - name: C_NAME
     data_type: string
-  - name: C_CURRENT_CDEMO_SK
+  - name: C_ADDRESS
+    data_type: string
+  - name: C_NATIONKEY
     data_type: decimal
-  - name: C_CURRENT_HDEMO_SK
+  - name: C_PHONE
+    data_type: string
+  - name: C_ACCTBAL
     data_type: decimal
-  - name: C_CURRENT_ADDR_SK
-    data_type: decimal
-  - name: C_FIRST_SHIPTO_DATE_SK
-    data_type: decimal
-  - name: C_FIRST_SALES_DATE_SK
-    data_type: decimal
-  - name: C_SALUTATION
+  - name: C_MKTSEGMENT
     data_type: string
-  - name: C_FIRST_NAME
+  - name: C_COMMENT
     data_type: string
-  - name: C_LAST_NAME
+  - name: CUSTOMER_COUNTRY_CODE
     data_type: string
-  - name: C_PREFERRED_CUST_FLAG
-    data_type: string
-  - name: C_BIRTH_DAY
-    data_type: decimal
-  - name: C_BIRTH_MONTH
-    data_type: decimal
-  - name: C_BIRTH_YEAR
-    data_type: decimal
-  - name: C_BIRTH_COUNTRY
-    data_type: string
-  - name: C_LOGIN
-    data_type: string
-  - name: C_EMAIL_ADDRESS
-    data_type: string
-  - name: C_LAST_REVIEW_DATE
-    data_type: string
-  - name: AGE
-    data_type: decimal
-    sql: (YEAR(CURRENT_DATE())-C_BIRTH_YEAR)
-  - name: AGE_BUCKET
-    data_type: string
-    sql: |-
-      (CASE 
-                  WHEN (YEAR(CURRENT_DATE())-C_BIRTH_YEAR) < 20 THEN '0-19'
-                  WHEN (YEAR(CURRENT_DATE())-C_BIRTH_YEAR) BETWEEN 20 AND 39 THEN '20-39'
-                  WHEN (YEAR(CURRENT_DATE())-C_BIRTH_YEAR) BETWEEN 40 AND 59 THEN '40-59'
-                  WHEN (YEAR(CURRENT_DATE())-C_BIRTH_YEAR) BETWEEN 60 AND 79 THEN '60-79'
-                  WHEN (YEAR(CURRENT_DATE())-C_BIRTH_YEAR) BETWEEN 80 AND 99 THEN '80-99'
-                  ELSE '100+'
-              END)
-  - name: VALUE_BUCKET
-    data_type: string
-    sql: |-
-      (CASE 
-                  WHEN CUSTOMER.F_REVENUE_PER_CUSTOMER < 1000 THEN 'low value'
-                  WHEN CUSTOMER.F_REVENUE_PER_CUSTOMER BETWEEN 1000 AND 3000 THEN 'medium value'
-                  ELSE 'high value'
-              END)
-connection_id: connection_TPCDS_SF10TCL
+    sql: LEFT(C_PHONE, 2)
+connection_id: connection_TPCH_SF1
 table: CUSTOMER

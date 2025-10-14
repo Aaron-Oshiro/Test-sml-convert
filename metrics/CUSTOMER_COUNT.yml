@@ -1,9 +1,7 @@
 unique_name: CUSTOMER_COUNT
 object_type: metric
 label: CUSTOMER_COUNT
-description: >-
-  {"synonyms": ["count of customers with sales in period, active customers with
-  sales"]}
+description: '{"comment": "commenting count of customer"}'
 calculation_method: count non-null
-column: SS_CUSTOMER_SK
-dataset: STORESALES
+column: C_CUSTKEY
+dataset: CUSTOMER
