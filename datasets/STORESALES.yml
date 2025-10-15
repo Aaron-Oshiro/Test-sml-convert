@@ -1,0 +1,58 @@
+unique_name: STORESALES
+object_type: dataset
+label: STORESALES
+columns:
+  - name: SS_SOLD_DATE_SK
+    data_type: decimal
+  - name: SS_SOLD_TIME_SK
+    data_type: decimal
+  - name: SS_ITEM_SK
+    data_type: decimal
+  - name: SS_CUSTOMER_SK
+    data_type: decimal
+  - name: SS_CDEMO_SK
+    data_type: decimal
+  - name: SS_HDEMO_SK
+    data_type: decimal
+  - name: SS_ADDR_SK
+    data_type: decimal
+  - name: SS_STORE_SK
+    data_type: decimal
+  - name: SS_PROMO_SK
+    data_type: decimal
+  - name: SS_TICKET_NUMBER
+    data_type: decimal
+  - name: SS_QUANTITY
+    data_type: decimal
+  - name: SS_WHOLESALE_COST
+    data_type: decimal
+  - name: SS_LIST_PRICE
+    data_type: decimal
+  - name: SS_SALES_PRICE
+    data_type: decimal
+  - name: SS_EXT_DISCOUNT_AMT
+    data_type: decimal
+  - name: SS_EXT_SALES_PRICE
+    data_type: decimal
+  - name: SS_EXT_WHOLESALE_COST
+    data_type: decimal
+  - name: SS_EXT_LIST_PRICE
+    data_type: decimal
+  - name: SS_EXT_TAX
+    data_type: decimal
+  - name: SS_COUPON_AMT
+    data_type: decimal
+  - name: SS_NET_PAID
+    data_type: decimal
+  - name: SS_NET_PAID_INC_TAX
+    data_type: decimal
+  - name: SS_NET_PROFIT
+    data_type: decimal
+  - name: F_SALES_PRICE
+    data_type: decimal
+    sql: SS_SALES_PRICE
+  - name: SALES_QUANTITY
+    data_type: decimal
+    sql: SS_QUANTITY
+connection_id: connection_TPCDS_SF10TCL
+table: STORE_SALES

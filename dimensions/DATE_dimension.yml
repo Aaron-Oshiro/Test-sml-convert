@@ -1,0 +1,36 @@
+unique_name: DATE_dimension
+object_type: dimension
+label: DATE
+hierarchies:
+  - unique_name: DATE_dimension_default_hierarchy
+    label: DATE Hierarchy
+    levels:
+      - unique_name: DATE_level
+        secondary_attributes:
+          - unique_name: MONTH
+            label: MONTH
+            dataset: DATE
+            key_columns:
+              - D_MOY
+            name_column: D_MOY
+          - unique_name: WEEK
+            label: WEEK
+            dataset: DATE
+            key_columns:
+              - D_WEEK_SEQ
+            name_column: D_WEEK_SEQ
+          - unique_name: YEAR
+            label: YEAR
+            dataset: DATE
+            key_columns:
+              - D_YEAR
+            name_column: D_YEAR
+level_attributes:
+  - unique_name: DATE_level
+    label: DATE
+    dataset: DATE
+    is_hidden: true
+    key_columns:
+      - D_DATE_SK
+    name_column: D_DATE_SK
+type: standard

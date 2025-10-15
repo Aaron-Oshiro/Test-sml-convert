@@ -1,6 +1,0 @@
-unique_name: SUPPLIER_COUNT
-object_type: metric
-label: SUPPLIER_COUNT
-calculation_method: count non-null
-column: S_SUPPKEY
-dataset: SUPPLIER

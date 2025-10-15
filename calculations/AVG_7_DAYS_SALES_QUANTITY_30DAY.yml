@@ -1,0 +1,10 @@
+unique_name: AVG_7_DAYS_SALES_QUANTITY_30DAY
+object_type: metric_calc
+label: AVG_7_DAYS_SALES_QUANTITY_30DAY
+description: '{"synonyms": ["running 7 day average of total sales quantity 30 days ago"]}'
+expression: >-
+  [Measures].[TOTAL_SALES_QUANTITY] /*TODO: Window Function not added. Rewrite
+  in MDX. Original SQL: AVG(TOTAL_SALES_QUANTITY) 
+           OVER (PARTITION BY EXCLUDING DATE.DATE ORDER BY DATE.DATE RANGE BETWEEN INTERVAL '36 days' 
+           PRECEDING AND INTERVAL '30 days' PRECEDING)*/
+mdx_aggregate_function: AVG
