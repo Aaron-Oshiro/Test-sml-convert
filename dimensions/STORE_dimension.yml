@@ -6,6 +6,12 @@ hierarchies:
     label: STORE Hierarchy
     levels:
       - unique_name: STORE_level
+        metrics:
+          - unique_name: TAX_RATE
+            label: TAX_RATE
+            calculation_method: average
+            column: TAX_RATE
+            dataset: STORE
         secondary_attributes:
           - unique_name: MARKET
             label: MARKET

@@ -6,6 +6,19 @@ hierarchies:
     label: ITEM Hierarchy
     levels:
       - unique_name: ITEM_level
+        metrics:
+          - unique_name: COST
+            label: COST
+            description: '{"synonyms": ["unit item cost","unit cost","item cost per unit"]}'
+            calculation_method: average
+            column: COST
+            dataset: ITEM
+          - unique_name: PRICE
+            label: PRICE
+            description: '{"synonyms": ["unit sales price","unit price","unit sales price"]}'
+            calculation_method: average
+            column: PRICE
+            dataset: ITEM
         secondary_attributes:
           - unique_name: BRAND
             label: BRAND
