@@ -1,0 +1,103 @@
+unique_name: model_tpch_analysis
+object_type: model
+label: tpch_analysis
+description: >-
+
+  Extension:
+  {"tables":[{"name":"CUSTOMER","dimensions":[{"name":"CUSTOMER_COUNTRY_CODE"},{"name":"CUSTOMER_MARKET_SEGMENT"},{"name":"CUSTOMER_NAME"},{"name":"CUSTOMER_NATION_NAME"},{"name":"CUSTOMER_REGION_NAME"}],"facts":[{"name":"C_CUSTOMER_ORDER_COUNT"}],"metrics":[{"name":"CUSTOMER_COUNT"},{"name":"CUSTOMER_ORDER_COUNT"}]},{"name":"LINEITEM","facts":[{"name":"LINE_ITEM_ID"}]},{"name":"NATION","dimensions":[{"name":"NATION_NAME"}],"facts":[{"name":"N_NAME"}]},{"name":"ORDERS","dimensions":[{"name":"ORDER_DATE"}],"facts":[{"name":"COUNT_LINE_ITEMS"},{"name":"O_ORDERKEY"}],"metrics":[{"name":"AVERAGE_LINE_ITEMS_PER_ORDER"},{"name":"AVG_SUPPLIER_COUNT"},{"name":"ORDER_AVERAGE_VALUE"},{"name":"ORDER_COUNT"}]},{"name":"REGION","facts":[{"name":"R_NAME"}]},{"name":"SUPPLIER","metrics":[{"name":"SUPPLIER_COUNT"}]}],"relationships":[{"name":"\"SYS_RELATIONSHIP_e51edfb4-30d0-4dd0-aaf6-d1d171e30b86\""},{"name":"\"SYS_RELATIONSHIP_86a8691f-af7f-471b-83bb-192ee40668bd\""},{"name":"\"SYS_RELATIONSHIP_ccb83147-7776-4b95-a6a3-dcabd9e2469d\""},{"name":"\"SYS_RELATIONSHIP_4bb484d4-6900-4161-80fc-8b687cb6bfd1\""},{"name":"\"SYS_RELATIONSHIP_d1f3c90d-f09d-40ab-94d3-2d89e1b50f23\""}]}comment_about_semantic_view
+dimensions:
+  - LINE_ITEM_ID
+metrics:
+  - unique_name: C_CUSTOMER_ORDER_COUNT
+  - unique_name: COUNT_LINE_ITEMS
+  - unique_name: CUSTOMER_COUNT
+  - unique_name: CUSTOMER_ORDER_COUNT
+  - unique_name: AVERAGE_LINE_ITEMS_PER_ORDER
+  - unique_name: AVG_SUPPLIER_COUNT
+  - unique_name: ORDER_AVERAGE_VALUE
+  - unique_name: ORDER_COUNT
+  - unique_name: SUPPLIER_COUNT
+partitions: []
+perspectives: []
+relationships:
+  - unique_name: SYS_RELATIONSHIP_e51edfb4-30d0-4dd0-aaf6-d1d171e30b86
+    from:
+      dataset: CUSTOMER
+      join_columns:
+        - C_NATIONKEY
+    to:
+      dimension: NATION_dimension
+      level: NATION_level
+  - unique_name: SYS_RELATIONSHIP_86a8691f-af7f-471b-83bb-192ee40668bd
+    from:
+      dataset: LINEITEM
+      join_columns:
+        - L_ORDERKEY
+    to:
+      dimension: ORDERS_dimension
+      level: ORDERS_level
+  - unique_name: SYS_RELATIONSHIP_ccb83147-7776-4b95-a6a3-dcabd9e2469d
+    from:
+      dataset: NATION
+      join_columns:
+        - N_REGIONKEY
+    to:
+      dimension: REGION_dimension
+      level: REGION_level
+  - unique_name: SYS_RELATIONSHIP_4bb484d4-6900-4161-80fc-8b687cb6bfd1
+    from:
+      dataset: ORDERS
+      join_columns:
+        - O_CUSTKEY
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER_level
+  - unique_name: SYS_RELATIONSHIP_d1f3c90d-f09d-40ab-94d3-2d89e1b50f23
+    from:
+      dataset: SUPPLIER
+      join_columns:
+        - S_NATIONKEY
+    to:
+      dimension: NATION_dimension
+      level: NATION_level
+  - unique_name: NATION_to_self
+    from:
+      dataset: NATION
+      join_columns:
+        - N_NATIONKEY
+    to:
+      dimension: NATION_dimension
+      level: NATION_level
+  - unique_name: ORDERS_to_self
+    from:
+      dataset: ORDERS
+      join_columns:
+        - O_ORDERKEY
+    to:
+      dimension: ORDERS_dimension
+      level: ORDERS_level
+  - unique_name: REGION_to_self
+    from:
+      dataset: REGION
+      join_columns:
+        - R_REGIONKEY
+    to:
+      dimension: REGION_dimension
+      level: REGION_level
+  - unique_name: CUSTOMER_to_self
+    from:
+      dataset: CUSTOMER
+      join_columns:
+        - C_CUSTKEY
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER_level
+  - unique_name: ORDERS_Date Dimension_O_ORDERDATE
+    from:
+      dataset: ORDERS
+      join_columns:
+        - O_ORDERDATE
+    role_play: O_ORDERDATE {0}
+    to:
+      dimension: Date Dimension
+      level: DayMonth

@@ -1,0 +1,38 @@
+unique_name: NATION_dimension
+object_type: dimension
+label: NATION
+description: testing comment for table
+hierarchies:
+  - unique_name: NATION_dimension_default_hierarchy
+    label: NATION Hierarchy
+    levels:
+      - unique_name: NATION_level
+        secondary_attributes:
+          - unique_name: NATION_NAME
+            label: NATION_NAME
+            dataset: NATION
+            key_columns:
+              - N_NAME
+            name_column: N_NAME
+level_attributes:
+  - unique_name: NATION_level
+    label: NATION
+    description: '{"comment": "testing comment for table"}'
+    dataset: NATION
+    is_hidden: true
+    key_columns:
+      - N_NATIONKEY
+    name_column: N_NATIONKEY
+relationships:
+  - unique_name: SYS_RELATIONSHIP_ccb83147-7776-4b95-a6a3-dcabd9e2469d
+    from:
+      dataset: NATION
+      hierarchy: NATION_dimension_default_hierarchy
+      join_columns:
+        - N_REGIONKEY
+      level: NATION_level
+    to:
+      dimension: REGION_dimension
+      level: REGION_level
+    type: embedded
+type: standard
