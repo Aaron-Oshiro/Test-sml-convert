@@ -1,6 +1,6 @@
 version: 1
-unique_name: tpch_analysis
+unique_name: PFM
 object_type: catalog
-label: tpch_analysis
+label: PFM
 aggressive_agg_promotion: false
 build_speculative_aggs: false
