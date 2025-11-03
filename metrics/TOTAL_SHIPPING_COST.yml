@@ -1,0 +1,7 @@
+unique_name: TOTAL_SHIPPING_COST
+object_type: metric
+label: TOTAL_SHIPPING_COST
+description: '{"comment": "Sum of the shipping cost"}'
+calculation_method: sum
+column: WS_EXT_SHIP_COST
+dataset: WEB_SALES

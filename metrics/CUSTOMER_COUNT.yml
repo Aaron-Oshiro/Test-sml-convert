@@ -1,7 +1,7 @@
 unique_name: CUSTOMER_COUNT
 object_type: metric
 label: CUSTOMER_COUNT
-description: '{"comment": "commenting count of customer"}'
+description: '{"comment": "Count of distinct customer identifiers"}'
 calculation_method: count non-null
-column: C_CUSTKEY
+column: C_CUSTOMER_SK
 dataset: CUSTOMER

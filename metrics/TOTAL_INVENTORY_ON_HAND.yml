@@ -1,0 +1,7 @@
+unique_name: TOTAL_INVENTORY_ON_HAND
+object_type: metric
+label: TOTAL_INVENTORY_ON_HAND
+description: '{"comment": "Total inventory on hand for a given item"}'
+calculation_method: sum
+column: INV_QUANTITY_ON_HAND
+dataset: INVENTORY

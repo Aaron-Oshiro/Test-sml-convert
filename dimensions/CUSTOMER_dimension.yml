@@ -7,57 +7,95 @@ hierarchies:
     levels:
       - unique_name: CUSTOMER_level
         secondary_attributes:
-          - unique_name: CUSTOMER_COUNTRY_CODE
-            label: CUSTOMER_COUNTRY_CODE
+          - unique_name: C_BIRTH_COUNTRY
+            label: C_BIRTH_COUNTRY
+            description: '{"comment": "Country where the customer was born"}'
             dataset: CUSTOMER
             key_columns:
-              - CUSTOMER_COUNTRY_CODE
-            name_column: CUSTOMER_COUNTRY_CODE
-          - unique_name: CUSTOMER_MARKET_SEGMENT
-            label: CUSTOMER_MARKET_SEGMENT
+              - C_BIRTH_COUNTRY
+            name_column: C_BIRTH_COUNTRY
+          - unique_name: C_CITY
+            label: C_CITY
+            description: '{"comment": "City where the customer is located"}'
+            dataset: CUSTOMER_ADDRESS
+            key_columns:
+              - CA_CITY
+            name_column: CA_CITY
+          - unique_name: C_CUSTOMER_ID
+            label: C_CUSTOMER_ID
+            description: '{"comment": "Customer identifier"}'
             dataset: CUSTOMER
             key_columns:
-              - C_MKTSEGMENT
-            name_column: C_MKTSEGMENT
-          - unique_name: CUSTOMER_NAME
-            label: CUSTOMER_NAME
-            description: '{"synonyms": ["asdf"],"comment": "testing comment for dimmension"}'
+              - C_CUSTOMER_ID
+            name_column: C_CUSTOMER_ID
+          - unique_name: C_CUSTOMER_SK
+            label: C_CUSTOMER_SK
+            description: '{"comment": "Customer unique identifier"}'
             dataset: CUSTOMER
             key_columns:
-              - C_NAME
-            name_column: C_NAME
-          - unique_name: CUSTOMER_NATION_NAME
-            label: CUSTOMER_NATION_NAME
-            dataset: NATION
+              - C_CUSTOMER_SK
+            name_column: C_CUSTOMER_SK
+          - unique_name: C_FIRST_NAME
+            label: C_FIRST_NAME
+            description: '{"comment": "First name of the customer"}'
+            dataset: CUSTOMER
             key_columns:
-              - N_NAME
-            name_column: N_NAME
-          - unique_name: CUSTOMER_REGION_NAME
-            label: CUSTOMER_REGION_NAME
-            description: '{"synonyms": ["dimension_synonym"]}'
-            dataset: REGION
+              - C_FIRST_NAME
+            name_column: C_FIRST_NAME
+          - unique_name: C_LAST_NAME
+            label: C_LAST_NAME
+            description: '{"comment": "Last name of the customer"}'
+            dataset: CUSTOMER
             key_columns:
-              - R_NAME
-            name_column: R_NAME
+              - C_LAST_NAME
+            name_column: C_LAST_NAME
+          - unique_name: C_STATE
+            label: C_STATE
+            description: '{"comment": "Customer state abbreviation"}'
+            dataset: CUSTOMER_ADDRESS
+            key_columns:
+              - CA_STATE
+            name_column: CA_STATE
 level_attributes:
   - unique_name: CUSTOMER_level
     label: CUSTOMER
-    description: '{"synonyms": ["customer_synonym_test"]}'
     dataset: CUSTOMER
     is_hidden: true
     key_columns:
-      - C_CUSTKEY
-    name_column: C_CUSTKEY
+      - C_CUSTOMER_SK
+    name_column: C_CUSTOMER_SK
 relationships:
-  - unique_name: SYS_RELATIONSHIP_e51edfb4-30d0-4dd0-aaf6-d1d171e30b86
+  - unique_name: CUSTOMER_TO_CUSTOMER_ADDRESS
     from:
       dataset: CUSTOMER
       hierarchy: CUSTOMER_dimension_default_hierarchy
       join_columns:
-        - C_NATIONKEY
+        - C_CURRENT_ADDR_SK
       level: CUSTOMER_level
     to:
-      dimension: NATION_dimension
-      level: NATION_level
+      dimension: CUSTOMER_ADDRESS_dimension
+      level: CUSTOMER_ADDRESS_level
+    type: embedded
+  - unique_name: CUSTOMER_TO_CUSTOMER_DEMO
+    from:
+      dataset: CUSTOMER
+      hierarchy: CUSTOMER_dimension_default_hierarchy
+      join_columns:
+        - C_CURRENT_CDEMO_SK
+      level: CUSTOMER_level
+    to:
+      dimension: CURRENT_CUSTOMER_DEMOGRAPHICS_dimension
+      level: CURRENT_CUSTOMER_DEMOGRAPHICS_level
+    type: embedded
+  - unique_name: CUSTOMER_TO_HOUSEHOLD_DEMO
+    from:
+      dataset: CUSTOMER
+      hierarchy: CUSTOMER_dimension_default_hierarchy
+      join_columns:
+        - C_CURRENT_HDEMO_SK
+      level: CUSTOMER_level
+    to:
+      dimension: HOUSEHOLD_DEMOGRAPHICS_dimension
+      level: HOUSEHOLD_DEMOGRAPHICS_level
     type: embedded
 type: standard

@@ -48,7 +48,7 @@ columns:
     data_type: int
   - name: QUARTER_OF_YEAR_NAME
     data_type: string
-connection_id: connection_TPCH_SF1
+connection_id: connection_TPCDS
 sql: |-
   SELECT DATE_DAY::TIMESTAMP as PK_DATE,
               cast(to_char(DATE_DAY, '%Y%m%d') as decimal) as DATEKEY,

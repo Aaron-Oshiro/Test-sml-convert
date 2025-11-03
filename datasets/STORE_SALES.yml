@@ -1,0 +1,71 @@
+unique_name: STORE_SALES
+object_type: dataset
+label: STORE_SALES
+columns:
+  - name: SS_SOLD_DATE_SK
+    data_type: decimal
+  - name: SS_SOLD_TIME_SK
+    data_type: decimal
+  - name: SS_ITEM_SK
+    data_type: decimal
+  - name: SS_CUSTOMER_SK
+    data_type: decimal
+  - name: SS_CDEMO_SK
+    data_type: decimal
+  - name: SS_HDEMO_SK
+    data_type: decimal
+  - name: SS_ADDR_SK
+    data_type: decimal
+  - name: SS_STORE_SK
+    data_type: decimal
+  - name: SS_PROMO_SK
+    data_type: decimal
+  - name: SS_TICKET_NUMBER
+    data_type: decimal
+  - name: SS_QUANTITY
+    data_type: decimal
+  - name: SS_WHOLESALE_COST
+    data_type: decimal
+  - name: SS_LIST_PRICE
+    data_type: decimal
+  - name: SS_SALES_PRICE
+    data_type: decimal
+  - name: SS_EXT_DISCOUNT_AMT
+    data_type: decimal
+  - name: SS_EXT_SALES_PRICE
+    data_type: decimal
+  - name: SS_EXT_WHOLESALE_COST
+    data_type: decimal
+  - name: SS_EXT_LIST_PRICE
+    data_type: decimal
+  - name: SS_EXT_TAX
+    data_type: decimal
+  - name: SS_COUPON_AMT
+    data_type: decimal
+  - name: SS_NET_PAID
+    data_type: decimal
+  - name: SS_NET_PAID_INC_TAX
+    data_type: decimal
+  - name: SS_NET_PROFIT
+    data_type: decimal
+  - name: SS_NET_PROFIT_TIER
+    data_type: string
+    sql: f_net_profit_tier
+  - name: F_NET_PROFIT_TIER
+    data_type: string
+    sql: |-
+      CASE
+                  WHEN STORE_SALES.SS_NET_PROFIT > 25000 THEN 'More than 25000'
+                  WHEN STORE_SALES.SS_NET_PROFIT BETWEEN 3000 AND 25000 THEN '3000-25000'
+                  WHEN STORE_SALES.SS_NET_PROFIT BETWEEN 2000 AND 3000 THEN '2000-3000'
+                  WHEN STORE_SALES.SS_NET_PROFIT BETWEEN 300 AND 2000 THEN '300-2000'
+                  WHEN STORE_SALES.SS_NET_PROFIT BETWEEN 250 AND 300 THEN '250-300'
+                  WHEN STORE_SALES.SS_NET_PROFIT BETWEEN 200 AND 250 THEN '200-250'
+                  WHEN STORE_SALES.SS_NET_PROFIT BETWEEN 150 AND 200 THEN '150-200'
+                  WHEN STORE_SALES.SS_NET_PROFIT BETWEEN 100 AND 150 THEN '100-150'
+                  WHEN STORE_SALES.SS_NET_PROFIT BETWEEN 50 AND 100 THEN ' 50-100'
+                  WHEN STORE_SALES.SS_NET_PROFIT BETWEEN 0 AND 50 THEN '  0- 50'
+                  ELSE ' 50 or Less'
+                END
+connection_id: connection_TPCDS
+table: STORE_SALES_V

@@ -1,0 +1,19 @@
+unique_name: HOUSEHOLD_DEMOGRAPHICS
+object_type: dataset
+label: HOUSEHOLD_DEMOGRAPHICS
+columns:
+  - name: HD_DEMO_SK
+    data_type: decimal
+  - name: HD_INCOME_BAND_SK
+    data_type: decimal
+  - name: HD_BUY_POTENTIAL
+    data_type: string
+  - name: HD_DEP_COUNT
+    data_type: decimal
+  - name: HD_VEHICLE_COUNT
+    data_type: decimal
+  - name: HD_VEHICLE_COUNT
+    data_type: decimal
+    sql: HOUSEHOLD_DEMOGRAPHICS.HD_VEHICLE_COUNT
+connection_id: connection_TPCDS
+table: HOUSEHOLD_DEMOGRAPHICS_V

@@ -1,0 +1,20 @@
+unique_name: RETURNED_ITEM_dimension
+object_type: dimension
+label: RETURNED_ITEM
+description: Dimension for returned items
+hierarchies:
+  - unique_name: RETURNED_ITEM_dimension_default_hierarchy
+    label: RETURNED_ITEM Hierarchy
+    levels:
+      - unique_name: RETURNED_ITEM_level
+        secondary_attributes: []
+level_attributes:
+  - unique_name: RETURNED_ITEM_level
+    label: RETURNED_ITEM
+    description: '{"comment": "Dimension for returned items"}'
+    dataset: RETURNED_ITEM
+    is_hidden: true
+    key_columns:
+      - I_ITEM_SK
+    name_column: I_ITEM_SK
+type: standard
