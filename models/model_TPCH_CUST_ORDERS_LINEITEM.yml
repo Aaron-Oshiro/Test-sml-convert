@@ -1,0 +1,43 @@
+unique_name: model_TPCH_CUST_ORDERS_LINEITEM
+object_type: model
+label: TPCH_CUST_ORDERS_LINEITEM
+dimensions: []
+metrics:
+  - unique_name: M_CUSTOMER_COUNT
+  - unique_name: M_CUST_COUNT
+  - unique_name: M_ORDER_COUNT
+partitions: []
+perspectives: []
+relationships:
+  - unique_name: SYS_RELATIONSHIP_79857479-248d-416d-9335-1a0a297bbb8f
+    from:
+      dataset: LINEITEM
+      join_columns:
+        - L_ORDERKEY
+    to:
+      dimension: ORDERS_dimension
+      level: ORDERS_level
+  - unique_name: SYS_RELATIONSHIP_4e93462c-9a7d-4f86-8300-08809e7339c2
+    from:
+      dataset: ORDERS
+      join_columns:
+        - O_CUSTKEY
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER_level
+  - unique_name: ORDERS_to_self
+    from:
+      dataset: ORDERS
+      join_columns:
+        - O_ORDERKEY
+    to:
+      dimension: ORDERS_dimension
+      level: ORDERS_level
+  - unique_name: CUSTOMER_to_self
+    from:
+      dataset: CUSTOMER
+      join_columns:
+        - C_CUSTKEY
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER_level

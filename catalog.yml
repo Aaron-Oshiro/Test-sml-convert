@@ -1,6 +1,6 @@
 version: 1
-unique_name: TPCDS_UNIFIED
+unique_name: TPCH_CUST_ORDERS_LINEITEM
 object_type: catalog
-label: TPCDS_UNIFIED
+label: TPCH_CUST_ORDERS_LINEITEM
 aggressive_agg_promotion: false
 build_speculative_aggs: false
