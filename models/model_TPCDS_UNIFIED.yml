@@ -13,9 +13,7 @@ metrics:
   - unique_name: UNIQUE_CATALOG_CUSTOMERS
   - unique_name: CUSTOMER_COUNT
   - unique_name: TOTAL_INVENTORY_ON_HAND
-  - unique_name: END_DATE
   - unique_name: SS_CUSTOMER_COUNT
-  - unique_name: START_DATE
   - unique_name: TOTAL_SHIPPING_COST
 partitions: []
 perspectives: []

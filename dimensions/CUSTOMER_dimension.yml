@@ -7,13 +7,6 @@ hierarchies:
     levels:
       - unique_name: CUSTOMER_level
         secondary_attributes:
-          - unique_name: CA_ZIP
-            label: CA_ZIP
-            description: '{"comment": "Customer zip code"}'
-            dataset: CUSTOMER_ADDRESS
-            key_columns:
-              - CA_ZIP
-            name_column: CA_ZIP
           - unique_name: C_BIRTH_COUNTRY
             label: C_BIRTH_COUNTRY
             description: '{"comment": "Country where the customer was born"}'

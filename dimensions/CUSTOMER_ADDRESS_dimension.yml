@@ -7,6 +7,13 @@ hierarchies:
     levels:
       - unique_name: CUSTOMER_ADDRESS_level
         secondary_attributes:
+          - unique_name: CA_ZIP
+            label: CA_ZIP
+            description: '{"comment": "Customer zip code"}'
+            dataset: CUSTOMER_ADDRESS
+            key_columns:
+              - CA_ZIP
+            name_column: CA_ZIP
           - unique_name: CA_CITY
             label: CA_CITY
             description: '{"comment": "City where the customer address is located"}'
@@ -21,13 +28,6 @@ hierarchies:
             key_columns:
               - CA_STATE
             name_column: CA_STATE
-          - unique_name: CA_ZIP
-            label: CA_ZIP
-            description: '{"comment": "Customer zip code"}'
-            dataset: CUSTOMER_ADDRESS
-            key_columns:
-              - CA_ZIP
-            name_column: CA_ZIP
 level_attributes:
   - unique_name: CUSTOMER_ADDRESS_level
     label: CUSTOMER_ADDRESS

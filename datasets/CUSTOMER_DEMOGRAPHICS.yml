@@ -23,6 +23,6 @@ columns:
     data_type: decimal
   - name: CD_DEP_COUNT
     data_type: decimal
-    sql: CUSTOMER_DEMOGRAPHICS.CURRENT_CUSTOMER_DEMOGRAPHICS.CD_DEP_COUNT
+    sql: CUSTOMER_DEMOGRAPHICS.CD_DEP_COUNT
 connection_id: con_ATSCALE_SV_TEST_TPCDS
 table: CUSTOMER_DEMOGRAPHICS_V

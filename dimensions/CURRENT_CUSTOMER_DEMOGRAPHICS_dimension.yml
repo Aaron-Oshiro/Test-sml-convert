@@ -7,14 +7,7 @@ hierarchies:
     label: CURRENT_CUSTOMER_DEMOGRAPHICS Hierarchy
     levels:
       - unique_name: CURRENT_CUSTOMER_DEMOGRAPHICS_level
-        secondary_attributes:
-          - unique_name: GENDER
-            label: GENDER
-            description: '{"comment": "Gender of the customer"}'
-            dataset: CURRENT_CUSTOMER_DEMOGRAPHICS
-            key_columns:
-              - CD_GENDER
-            name_column: CD_GENDER
+        secondary_attributes: []
 level_attributes:
   - unique_name: CURRENT_CUSTOMER_DEMOGRAPHICS_level
     label: CURRENT_CUSTOMER_DEMOGRAPHICS
