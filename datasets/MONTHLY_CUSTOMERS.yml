@@ -1,0 +1,10 @@
+unique_name: MONTHLY_CUSTOMERS
+object_type: dataset
+label: MONTHLY_CUSTOMERS
+columns:
+  - name: MONTH
+    data_type: date
+  - name: CUSTOMER_ID
+    data_type: decimal
+connection_id: con_ATSCALE_SV_TEST_TPCH_SF1
+table: MONTHLY_CUSTOMERS

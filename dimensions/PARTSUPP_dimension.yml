@@ -1,0 +1,42 @@
+unique_name: PARTSUPP_dimension
+object_type: dimension
+label: PARTSUPP
+hierarchies:
+  - unique_name: PARTSUPP_dimension_default_hierarchy
+    label: PARTSUPP Hierarchy
+    levels:
+      - unique_name: PARTSUPP_level
+        secondary_attributes: []
+level_attributes:
+  - unique_name: PARTSUPP_level
+    label: PARTSUPP
+    dataset: PARTSUPP
+    is_hidden: true
+    key_columns:
+      - PS_PARTKEY
+      - PS_SUPPKEY
+    name_column: PS_PARTKEY
+relationships:
+  - unique_name: SYS_RELATIONSHIP_1eb6b5cc-cad4-421d-abe8-28b59899e154
+    from:
+      dataset: PARTSUPP
+      hierarchy: PARTSUPP_dimension_default_hierarchy
+      join_columns:
+        - PS_SUPPKEY
+      level: PARTSUPP_level
+    to:
+      dimension: SUPPLIER_dimension
+      level: SUPPLIER_level
+    type: embedded
+  - unique_name: SYS_RELATIONSHIP_9d86e4b2-f82f-49ff-9cbd-33af9e63d800
+    from:
+      dataset: PARTSUPP
+      hierarchy: PARTSUPP_dimension_default_hierarchy
+      join_columns:
+        - PS_PARTKEY
+      level: PARTSUPP_level
+    to:
+      dimension: PART_dimension
+      level: PART_level
+    type: embedded
+type: standard

@@ -1,0 +1,18 @@
+unique_name: DIM_SUPPNAME
+object_type: dimension
+label: DIM_SUPPNAME
+hierarchies:
+  - unique_name: DIM_SUPPNAME_default_hierarchy
+    label: DIM_SUPPNAME Hierarchy
+    levels:
+      - unique_name: DIM_SUPPNAME_level
+        secondary_attributes: []
+is_degenerate: true
+level_attributes:
+  - unique_name: DIM_SUPPNAME_level
+    label: DIM_SUPPNAME
+    dataset: LINEITEM
+    is_hidden: true
+    key_columns:
+      - DIM_SUPPNAME
+    name_column: DIM_SUPPNAME

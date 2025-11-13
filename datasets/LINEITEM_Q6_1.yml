@@ -1,6 +1,6 @@
-unique_name: LINEITEM
+unique_name: LINEITEM_Q6_1
 object_type: dataset
-label: LINEITEM
+label: LINEITEM_Q6_1
 columns:
   - name: L_ORDERKEY
     data_type: decimal
@@ -34,11 +34,5 @@ columns:
     data_type: string
   - name: L_COMMENT
     data_type: string
-  - name: DIM_SUPPKEY
-    data_type: decimal
-    sql: SUPPLIER.f_suppkey
-  - name: DIM_SUPPNAME
-    data_type: string
-    sql: SUPPLIER.f_name
 connection_id: con_ATSCALE_SV_TEST_TPCH_SF1
 table: TPCH_LINEITEM

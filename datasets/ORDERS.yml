@@ -20,11 +20,21 @@ columns:
     data_type: decimal
   - name: O_COMMENT
     data_type: string
-  - name: D_CUST_NAME_AND_QUANTITY
-    data_type: string
-    sql: ORDERS.f_cust_name_and_quantity
-  - name: F_CUST_NAME_AND_QUANTITY
-    data_type: string
-    sql: CUSTOMER.f_name || sum(LINEITEM.L_QUANTITY)
+  - name: DIM_QUARTER_NUMBER
+    data_type: decimal
+    sql: EXTRACT('QUARTER', O_ORDERDATE)
+  - name: DIM_YEAR_NUMBER
+    data_type: decimal
+    sql: EXTRACT(YEAR FROM O_ORDERDATE)
+  - name: F_CUSTKEY_IF_MANY_QUARTERLY_ORDERS
+    data_type: decimal
+    sql: |-
+      CASE
+            WHEN COUNT(*) OVER(PARTITION BY O_CUSTKEY, DATE_TRUNC('QUARTER', O_ORDERDATE)) > 1
+            THEN O_CUSTKEY
+            END
+  - name: F_ORDER_TOTAL
+    data_type: decimal
+    sql: LINEITEM.sales
 connection_id: con_ATSCALE_SV_TEST_TPCH_SF1
 table: TPCH_ORDERS

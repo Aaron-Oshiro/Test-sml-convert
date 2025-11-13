@@ -18,5 +18,8 @@ columns:
     data_type: string
   - name: C_COMMENT
     data_type: string
+  - name: F_IS_TOP_CUSTOMER
+    data_type: boolean
+    sql: ROW_NUMBER() OVER(ORDER BY f_revenue DESC NULLS LAST) <= 10
 connection_id: con_ATSCALE_SV_TEST_TPCH_SF1
 table: TPCH_CUSTOMER

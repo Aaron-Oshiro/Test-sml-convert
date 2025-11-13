@@ -7,12 +7,18 @@ hierarchies:
     levels:
       - unique_name: CUSTOMER_level
         secondary_attributes:
-          - unique_name: F_NAME
-            label: F_NAME
+          - unique_name: DIM_CUSTOMER_ID
+            label: DIM_CUSTOMER_ID
             dataset: CUSTOMER
             key_columns:
-              - C_NAME
-            name_column: C_NAME
+              - C_CUSTKEY
+            name_column: C_CUSTKEY
+          - unique_name: F_IS_TOP_CUSTOMER
+            label: F_IS_TOP_CUSTOMER
+            dataset: CUSTOMER
+            key_columns:
+              - F_IS_TOP_CUSTOMER
+            name_column: F_IS_TOP_CUSTOMER
 level_attributes:
   - unique_name: CUSTOMER_level
     label: CUSTOMER
@@ -21,4 +27,16 @@ level_attributes:
     key_columns:
       - C_CUSTKEY
     name_column: C_CUSTKEY
+relationships:
+  - unique_name: SYS_RELATIONSHIP_29670b5c-0669-4eb4-b9d9-f056aaa47923
+    from:
+      dataset: CUSTOMER
+      hierarchy: CUSTOMER_dimension_default_hierarchy
+      join_columns:
+        - C_NATIONKEY
+      level: CUSTOMER_level
+    to:
+      dimension: CUSTOMER_NATION_dimension
+      level: CUSTOMER_NATION_level
+    type: embedded
 type: standard

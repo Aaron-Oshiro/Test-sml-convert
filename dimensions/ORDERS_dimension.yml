@@ -7,18 +7,30 @@ hierarchies:
     levels:
       - unique_name: ORDERS_level
         secondary_attributes:
-          - unique_name: D_CUST_NAME_AND_QUANTITY
-            label: D_CUST_NAME_AND_QUANTITY
+          - unique_name: DIM_QUARTER_NUMBER
+            label: DIM_QUARTER_NUMBER
             dataset: ORDERS
             key_columns:
-              - D_CUST_NAME_AND_QUANTITY
-            name_column: D_CUST_NAME_AND_QUANTITY
-          - unique_name: F_CUST_NAME_AND_QUANTITY
-            label: F_CUST_NAME_AND_QUANTITY
+              - DIM_QUARTER_NUMBER
+            name_column: DIM_QUARTER_NUMBER
+          - unique_name: DIM_YEAR_NUMBER
+            label: DIM_YEAR_NUMBER
             dataset: ORDERS
             key_columns:
-              - F_CUST_NAME_AND_QUANTITY
-            name_column: F_CUST_NAME_AND_QUANTITY
+              - DIM_YEAR_NUMBER
+            name_column: DIM_YEAR_NUMBER
+          - unique_name: F_CUSTKEY_IF_MANY_QUARTERLY_ORDERS
+            label: F_CUSTKEY_IF_MANY_QUARTERLY_ORDERS
+            dataset: ORDERS
+            key_columns:
+              - F_CUSTKEY_IF_MANY_QUARTERLY_ORDERS
+            name_column: F_CUSTKEY_IF_MANY_QUARTERLY_ORDERS
+          - unique_name: F_ORDERKEY
+            label: F_ORDERKEY
+            dataset: ORDERS
+            key_columns:
+              - O_ORDERKEY
+            name_column: O_ORDERKEY
 level_attributes:
   - unique_name: ORDERS_level
     label: ORDERS
@@ -28,7 +40,7 @@ level_attributes:
       - O_ORDERKEY
     name_column: O_ORDERKEY
 relationships:
-  - unique_name: SYS_RELATIONSHIP_4e93462c-9a7d-4f86-8300-08809e7339c2
+  - unique_name: SYS_RELATIONSHIP_ea2739ac-801c-4a60-bab7-279abe474650
     from:
       dataset: ORDERS
       hierarchy: ORDERS_dimension_default_hierarchy

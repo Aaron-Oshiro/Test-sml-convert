@@ -1,6 +1,6 @@
 version: 1
-unique_name: TPCH_CUST_ORDERS_LINEITEM
+unique_name: TPCH_SEMANTIC_VIEW
 object_type: catalog
-label: TPCH_CUST_ORDERS_LINEITEM
+label: TPCH_SEMANTIC_VIEW
 aggressive_agg_promotion: false
 build_speculative_aggs: false
