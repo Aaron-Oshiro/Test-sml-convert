@@ -2,24 +2,41 @@ unique_name: CUSTOMER
 object_type: dataset
 label: CUSTOMER
 columns:
-  - name: C_CUSTKEY
+  - name: C_CUSTOMER_SK
     data_type: decimal
-  - name: C_NAME
+  - name: C_CUSTOMER_ID
     data_type: string
-  - name: C_ADDRESS
-    data_type: string
-  - name: C_NATIONKEY
+  - name: C_CURRENT_CDEMO_SK
     data_type: decimal
-  - name: C_PHONE
-    data_type: string
-  - name: C_ACCTBAL
+  - name: C_CURRENT_HDEMO_SK
     data_type: decimal
-  - name: C_MKTSEGMENT
+  - name: C_CURRENT_ADDR_SK
+    data_type: decimal
+  - name: C_FIRST_SHIPTO_DATE_SK
+    data_type: decimal
+  - name: C_FIRST_SALES_DATE_SK
+    data_type: decimal
+  - name: C_SALUTATION
     data_type: string
-  - name: C_COMMENT
+  - name: C_FIRST_NAME
     data_type: string
-  - name: F_IS_TOP_CUSTOMER
-    data_type: boolean
-    sql: ROW_NUMBER() OVER(ORDER BY f_revenue DESC NULLS LAST) <= 10
-connection_id: con_ATSCALE_SV_TEST_TPCH_SF1
-table: TPCH_CUSTOMER
+  - name: C_LAST_NAME
+    data_type: string
+  - name: C_PREFERRED_CUST_FLAG
+    data_type: string
+  - name: C_BIRTH_DAY
+    data_type: decimal
+  - name: C_BIRTH_MONTH
+    data_type: decimal
+  - name: C_BIRTH_YEAR
+    data_type: decimal
+  - name: C_BIRTH_COUNTRY
+    data_type: string
+  - name: C_LOGIN
+    data_type: string
+  - name: C_EMAIL_ADDRESS
+    data_type: string
+  - name: C_LAST_REVIEW_DATE
+    data_type: string
+connection_id: con_ATSCALE_SV_TEST_TPCDS
+table: CUSTOMER_V

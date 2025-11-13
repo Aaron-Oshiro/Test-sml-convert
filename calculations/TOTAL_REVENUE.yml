@@ -1,5 +1,0 @@
-unique_name: TOTAL_REVENUE
-object_type: metric_calc
-label: TOTAL_REVENUE
-expression: '[Measures].[F_REVENUE]'
-mdx_aggregate_function: SUM

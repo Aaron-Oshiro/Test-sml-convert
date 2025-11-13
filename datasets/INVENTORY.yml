@@ -1,0 +1,14 @@
+unique_name: INVENTORY
+object_type: dataset
+label: INVENTORY
+columns:
+  - name: INV_DATE_SK
+    data_type: decimal
+  - name: INV_ITEM_SK
+    data_type: decimal
+  - name: INV_WAREHOUSE_SK
+    data_type: decimal
+  - name: INV_QUANTITY_ON_HAND
+    data_type: decimal
+connection_id: con_ATSCALE_SV_TEST_TPCDS
+table: INVENTORY_V

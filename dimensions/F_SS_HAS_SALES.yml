@@ -1,0 +1,22 @@
+unique_name: F_SS_HAS_SALES
+object_type: dimension
+label: F_SS_HAS_SALES
+description: '{"comment": "Boolean indicating whether valid store sales item was returned"}'
+hierarchies:
+  - unique_name: F_SS_HAS_SALES_default_hierarchy
+    label: F_SS_HAS_SALES Hierarchy
+    levels:
+      - unique_name: F_SS_HAS_SALES_level
+        secondary_attributes: []
+is_degenerate: true
+level_attributes:
+  - unique_name: F_SS_HAS_SALES_level
+    label: F_SS_HAS_SALES
+    description: >-
+      {"comment": "Boolean indicating whether valid store sales item was
+      returned"}
+    dataset: STORE_RETURNS
+    is_hidden: true
+    key_columns:
+      - F_SS_HAS_SALES
+    name_column: F_SS_HAS_SALES

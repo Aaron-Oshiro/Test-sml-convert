@@ -1,0 +1,7 @@
+unique_name: END_DATE
+object_type: metric
+label: END_DATE
+description: '{"comment": "Max date (end date) of the store sales"}'
+calculation_method: maximum
+column: D_DATE
+dataset: DATE_DIM

@@ -1,6 +1,0 @@
-unique_name: AVG_ORDER_VALUE
-object_type: metric
-label: AVG_ORDER_VALUE
-calculation_method: average
-column: F_ORDER_TOTAL
-dataset: ORDERS

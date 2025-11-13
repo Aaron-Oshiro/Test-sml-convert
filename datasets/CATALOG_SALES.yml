@@ -1,0 +1,74 @@
+unique_name: CATALOG_SALES
+object_type: dataset
+label: CATALOG_SALES
+columns:
+  - name: CS_SOLD_DATE_SK
+    data_type: decimal
+  - name: CS_SOLD_TIME_SK
+    data_type: decimal
+  - name: CS_SHIP_DATE_SK
+    data_type: decimal
+  - name: CS_BILL_CUSTOMER_SK
+    data_type: decimal
+  - name: CS_BILL_CDEMO_SK
+    data_type: decimal
+  - name: CS_BILL_HDEMO_SK
+    data_type: decimal
+  - name: CS_BILL_ADDR_SK
+    data_type: decimal
+  - name: CS_SHIP_CUSTOMER_SK
+    data_type: decimal
+  - name: CS_SHIP_CDEMO_SK
+    data_type: decimal
+  - name: CS_SHIP_HDEMO_SK
+    data_type: decimal
+  - name: CS_SHIP_ADDR_SK
+    data_type: decimal
+  - name: CS_CALL_CENTER_SK
+    data_type: decimal
+  - name: CS_CATALOG_PAGE_SK
+    data_type: decimal
+  - name: CS_SHIP_MODE_SK
+    data_type: decimal
+  - name: CS_WAREHOUSE_SK
+    data_type: decimal
+  - name: CS_ITEM_SK
+    data_type: decimal
+  - name: CS_PROMO_SK
+    data_type: decimal
+  - name: CS_ORDER_NUMBER
+    data_type: decimal
+  - name: CS_QUANTITY
+    data_type: decimal
+  - name: CS_WHOLESALE_COST
+    data_type: decimal
+  - name: CS_LIST_PRICE
+    data_type: decimal
+  - name: CS_SALES_PRICE
+    data_type: decimal
+  - name: CS_EXT_DISCOUNT_AMT
+    data_type: decimal
+  - name: CS_EXT_SALES_PRICE
+    data_type: decimal
+  - name: CS_EXT_WHOLESALE_COST
+    data_type: decimal
+  - name: CS_EXT_LIST_PRICE
+    data_type: decimal
+  - name: CS_EXT_TAX
+    data_type: decimal
+  - name: CS_COUPON_AMT
+    data_type: decimal
+  - name: CS_EXT_SHIP_COST
+    data_type: decimal
+  - name: CS_NET_PAID
+    data_type: decimal
+  - name: CS_NET_PAID_INC_TAX
+    data_type: decimal
+  - name: CS_NET_PAID_INC_SHIP
+    data_type: decimal
+  - name: CS_NET_PAID_INC_SHIP_TAX
+    data_type: decimal
+  - name: CS_NET_PROFIT
+    data_type: decimal
+connection_id: con_ATSCALE_SV_TEST_TPCDS
+table: CATALOG_SALES_V

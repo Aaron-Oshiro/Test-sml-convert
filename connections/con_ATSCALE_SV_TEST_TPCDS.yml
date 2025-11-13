@@ -1,0 +1,6 @@
+unique_name: con_ATSCALE_SV_TEST_TPCDS
+object_type: connection
+label: con_ATSCALE_SV_TEST_TPCDS
+as_connection: con1
+database: ATSCALE_SV_TEST
+schema: TPCDS

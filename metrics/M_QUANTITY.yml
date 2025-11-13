@@ -1,6 +1,0 @@
-unique_name: M_QUANTITY
-object_type: metric
-label: M_QUANTITY
-calculation_method: sum
-column: L_QUANTITY
-dataset: LINEITEM_Q6_1

@@ -1,6 +1,0 @@
-unique_name: M_INVENTORY_CHANGE
-object_type: metric
-label: M_INVENTORY_CHANGE
-calculation_method: sum
-column: F_DAILY_INVENTORY_CHANGE
-dataset: LINEITEM_DAY_PART

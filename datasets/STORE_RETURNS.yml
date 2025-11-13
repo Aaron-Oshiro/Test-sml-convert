@@ -1,0 +1,49 @@
+unique_name: STORE_RETURNS
+object_type: dataset
+label: STORE_RETURNS
+columns:
+  - name: SR_RETURNED_DATE_SK
+    data_type: decimal
+  - name: SR_RETURN_TIME_SK
+    data_type: decimal
+  - name: SR_ITEM_SK
+    data_type: decimal
+  - name: SR_CUSTOMER_SK
+    data_type: decimal
+  - name: SR_CDEMO_SK
+    data_type: decimal
+  - name: SR_HDEMO_SK
+    data_type: decimal
+  - name: SR_ADDR_SK
+    data_type: decimal
+  - name: SR_STORE_SK
+    data_type: decimal
+  - name: SR_REASON_SK
+    data_type: decimal
+  - name: SR_TICKET_NUMBER
+    data_type: decimal
+  - name: SR_RETURN_QUANTITY
+    data_type: decimal
+  - name: SR_RETURN_AMT
+    data_type: decimal
+  - name: SR_RETURN_TAX
+    data_type: decimal
+  - name: SR_RETURN_AMT_INC_TAX
+    data_type: decimal
+  - name: SR_FEE
+    data_type: decimal
+  - name: SR_RETURN_SHIP_COST
+    data_type: decimal
+  - name: SR_REFUNDED_CASH
+    data_type: decimal
+  - name: SR_REVERSED_CHARGE
+    data_type: decimal
+  - name: SR_STORE_CREDIT
+    data_type: decimal
+  - name: SR_NET_LOSS
+    data_type: decimal
+  - name: F_SS_HAS_SALES
+    data_type: boolean
+    sql: iff(STORE_SALES.f_ss_item_sk is not null, true, false)
+connection_id: con_ATSCALE_SV_TEST_TPCDS
+table: STORE_RETURNS_V

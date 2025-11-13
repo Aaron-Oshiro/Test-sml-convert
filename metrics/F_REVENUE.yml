@@ -1,6 +1,0 @@
-unique_name: F_REVENUE
-object_type: metric
-label: F_REVENUE
-calculation_method: sum
-column: F_ORDER_TOTAL
-dataset: ORDERS

@@ -1,6 +1,0 @@
-unique_name: CUSTOMER_COUNT_IF_MANY_QUARTERLY_ORDERS
-object_type: metric
-label: CUSTOMER_COUNT_IF_MANY_QUARTERLY_ORDERS
-calculation_method: count non-null
-column: F_CUSTKEY_IF_MANY_QUARTERLY_ORDERS
-dataset: ORDERS

@@ -1,0 +1,27 @@
+unique_name: CUSTOMER_DEMOGRAPHICS_dimension
+object_type: dimension
+label: CUSTOMER_DEMOGRAPHICS
+description: Dimension for Customer demographics at the time of sale
+hierarchies:
+  - unique_name: CUSTOMER_DEMOGRAPHICS_dimension_default_hierarchy
+    label: CUSTOMER_DEMOGRAPHICS Hierarchy
+    levels:
+      - unique_name: CUSTOMER_DEMOGRAPHICS_level
+        secondary_attributes:
+          - unique_name: GENDER
+            label: GENDER
+            description: '{"comment": "Gender of the customer at the time of sale"}'
+            dataset: CUSTOMER_DEMOGRAPHICS
+            key_columns:
+              - CD_GENDER
+            name_column: CD_GENDER
+level_attributes:
+  - unique_name: CUSTOMER_DEMOGRAPHICS_level
+    label: CUSTOMER_DEMOGRAPHICS
+    description: '{"comment": "Dimension for Customer demographics at the time of sale"}'
+    dataset: CUSTOMER_DEMOGRAPHICS
+    is_hidden: true
+    key_columns:
+      - CD_DEMO_SK
+    name_column: CD_DEMO_SK
+type: standard
