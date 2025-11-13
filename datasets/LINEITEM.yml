@@ -34,6 +34,9 @@ columns:
     data_type: string
   - name: L_COMMENT
     data_type: string
+  - name: DIM_ORDERDATE
+    data_type: date
+    sql: ORDERS.f_orderdate
   - name: DIM_SUPPKEY
     data_type: decimal
     sql: SUPPLIER.f_suppkey

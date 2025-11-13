@@ -7,6 +7,24 @@ hierarchies:
     levels:
       - unique_name: ORDERS_level
         secondary_attributes:
+          - unique_name: DIM_DAY
+            label: DIM_DAY
+            dataset: ORDERS
+            key_columns:
+              - DIM_DAY
+            name_column: DIM_DAY
+          - unique_name: DIM_MONTH
+            label: DIM_MONTH
+            dataset: ORDERS
+            key_columns:
+              - DIM_MONTH
+            name_column: DIM_MONTH
+          - unique_name: DIM_QUARTER
+            label: DIM_QUARTER
+            dataset: ORDERS
+            key_columns:
+              - DIM_QUARTER
+            name_column: DIM_QUARTER
           - unique_name: DIM_QUARTER_NUMBER
             label: DIM_QUARTER_NUMBER
             dataset: ORDERS
@@ -25,6 +43,12 @@ hierarchies:
             key_columns:
               - F_CUSTKEY_IF_MANY_QUARTERLY_ORDERS
             name_column: F_CUSTKEY_IF_MANY_QUARTERLY_ORDERS
+          - unique_name: F_ORDERDATE
+            label: F_ORDERDATE
+            dataset: ORDERS
+            key_columns:
+              - O_ORDERDATE
+            name_column: O_ORDERDATE
           - unique_name: F_ORDERKEY
             label: F_ORDERKEY
             dataset: ORDERS

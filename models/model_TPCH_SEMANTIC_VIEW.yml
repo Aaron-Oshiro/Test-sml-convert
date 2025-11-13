@@ -2,8 +2,11 @@ unique_name: model_TPCH_SEMANTIC_VIEW
 object_type: model
 label: TPCH_SEMANTIC_VIEW
 dimensions:
+  - DIM_ORDERDATE
   - DIM_SUPPKEY
   - DIM_SUPPNAME
+  - F_LAST_ACTIVE_MONTH
+  - F_PREVIOUS_MONTH
 metrics:
   - unique_name: F_REVENUE
   - unique_name: CUSTOMER_COUNT
@@ -192,84 +195,3 @@ relationships:
     to:
       dimension: SUPPLIER_REGION_dimension
       level: SUPPLIER_REGION_level
-  - unique_name: ORDERS_Date Dimension_DATE_TRUNC('DAY', o_orderdate)
-    from:
-      dataset: ORDERS
-      join_columns:
-        - DATE_TRUNC('DAY', o_orderdate)
-    role_play: DATE_TRUNC('DAY', o_orderdate) {0}
-    to:
-      dimension: Date Dimension
-      level: DayMonth
-  - unique_name: LINEITEM_Date Dimension_f_orderdate
-    from:
-      dataset: LINEITEM
-      join_columns:
-        - f_orderdate
-    role_play: f_orderdate {0}
-    to:
-      dimension: Date Dimension
-      level: DayMonth
-  - unique_name: ORDERS_Date Dimension_DATE_TRUNC('MONTH', o_orderdate)
-    from:
-      dataset: ORDERS
-      join_columns:
-        - DATE_TRUNC('MONTH', o_orderdate)
-    role_play: DATE_TRUNC('MONTH', o_orderdate) {0}
-    to:
-      dimension: Date Dimension
-      level: DayMonth
-  - unique_name: ORDERS_Date Dimension_DATE_TRUNC('QUARTER', o_orderdate)
-    from:
-      dataset: ORDERS
-      join_columns:
-        - DATE_TRUNC('QUARTER', o_orderdate)
-    role_play: DATE_TRUNC('QUARTER', o_orderdate) {0}
-    to:
-      dimension: Date Dimension
-      level: DayMonth
-  - unique_name: |-
-      MONTHLY_CUSTOMERS_Date Dimension_lag(month)
-            over(partition by customer_id order by month)
-    from:
-      dataset: MONTHLY_CUSTOMERS
-      join_columns:
-        - |-
-          lag(month)
-                over(partition by customer_id order by month)
-    role_play: |-
-      lag(month)
-            over(partition by customer_id order by month) {0}
-    to:
-      dimension: Date Dimension
-      level: DayMonth
-  - unique_name: |-
-      MONTHLY_CUSTOMERS_Date Dimension_CASE
-            WHEN DATEDIFF('month', month, f_last_active_month) = -1
-            THEN f_last_active_month else null
-            END
-    from:
-      dataset: MONTHLY_CUSTOMERS
-      join_columns:
-        - |-
-          CASE
-                WHEN DATEDIFF('month', month, f_last_active_month) = -1
-                THEN f_last_active_month else null
-                END
-    role_play: |-
-      CASE
-            WHEN DATEDIFF('month', month, f_last_active_month) = -1
-            THEN f_last_active_month else null
-            END {0}
-    to:
-      dimension: Date Dimension
-      level: DayMonth
-  - unique_name: ORDERS_Date Dimension_O_ORDERDATE
-    from:
-      dataset: ORDERS
-      join_columns:
-        - O_ORDERDATE
-    role_play: O_ORDERDATE {0}
-    to:
-      dimension: Date Dimension
-      level: DayMonth

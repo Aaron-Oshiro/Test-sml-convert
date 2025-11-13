@@ -6,5 +6,19 @@ columns:
     data_type: date
   - name: CUSTOMER_ID
     data_type: decimal
+  - name: F_LAST_ACTIVE_MONTH
+    data_type: date
+    sql: |-
+      lag(MONTH)
+            over(partition by CUSTOMER_ID order by MONTH)
+  - name: F_PREVIOUS_MONTH
+    data_type: date
+    sql: |-
+      CASE
+            WHEN DATEDIFF('MONTH', MONTH, "lag(MONTH)
+            over(partition by CUSTOMER_ID order by MONTH)") = -1
+            THEN "lag(MONTH)
+            over(partition by CUSTOMER_ID order by MONTH)" else null
+            END
 connection_id: con_ATSCALE_SV_TEST_TPCH_SF1
 table: MONTHLY_CUSTOMERS

@@ -1,0 +1,18 @@
+unique_name: DIM_ORDERDATE
+object_type: dimension
+label: DIM_ORDERDATE
+hierarchies:
+  - unique_name: DIM_ORDERDATE_default_hierarchy
+    label: DIM_ORDERDATE Hierarchy
+    levels:
+      - unique_name: DIM_ORDERDATE_level
+        secondary_attributes: []
+is_degenerate: true
+level_attributes:
+  - unique_name: DIM_ORDERDATE_level
+    label: DIM_ORDERDATE
+    dataset: LINEITEM
+    is_hidden: true
+    key_columns:
+      - DIM_ORDERDATE
+    name_column: DIM_ORDERDATE
