@@ -58,6 +58,13 @@ hierarchies:
             key_columns:
               - I_PRODUCT_NAME
             name_column: I_PRODUCT_NAME
+          - unique_name: I_CURRENT_PRICE
+            label: I_CURRENT_PRICE
+            description: '{"comment": "Current price of the item"}'
+            dataset: ITEM
+            key_columns:
+              - I_CURRENT_PRICE
+            name_column: I_CURRENT_PRICE
           - unique_name: I_ITEM_SIZE
             label: I_ITEM_SIZE
             description: '{"comment": "Item size"}'

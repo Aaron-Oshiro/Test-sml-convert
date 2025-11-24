@@ -21,6 +21,13 @@ hierarchies:
             key_columns:
               - HD_BUY_POTENTIAL
             name_column: HD_BUY_POTENTIAL
+          - unique_name: HD_VEHICLE_COUNT
+            label: HD_VEHICLE_COUNT
+            description: '{"comment": "Number of vehicles owned by the household"}'
+            dataset: HOUSEHOLD_DEMOGRAPHICS
+            key_columns:
+              - HD_VEHICLE_COUNT
+            name_column: HD_VEHICLE_COUNT
 level_attributes:
   - unique_name: HOUSEHOLD_DEMOGRAPHICS_level
     label: HOUSEHOLD_DEMOGRAPHICS

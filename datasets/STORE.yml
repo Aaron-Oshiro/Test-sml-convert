@@ -60,11 +60,5 @@ columns:
     data_type: decimal
   - name: S_TAX_PRECENTAGE
     data_type: decimal
-  - name: S_FLOOR_SPACE
-    data_type: decimal
-    sql: STORE.S_FLOOR_SPACE
-  - name: S_NUMBER_EMPLOYEES
-    data_type: decimal
-    sql: S_NUMBER_EMPLOYEES
 connection_id: con_ATSCALE_SV_TEST_TPCDS
 table: STORE_V

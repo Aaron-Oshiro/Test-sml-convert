@@ -58,6 +58,20 @@ hierarchies:
             key_columns:
               - S_STORE_SK
             name_column: S_STORE_SK
+          - unique_name: S_FLOOR_SPACE
+            label: S_FLOOR_SPACE
+            description: '{"comment": "Total floor space in square feet"}'
+            dataset: STORE
+            key_columns:
+              - S_FLOOR_SPACE
+            name_column: S_FLOOR_SPACE
+          - unique_name: S_NUMBER_EMPLOYEES
+            label: S_NUMBER_EMPLOYEES
+            description: '{"comment": "Number of employees in the store"}'
+            dataset: STORE
+            key_columns:
+              - S_NUMBER_EMPLOYEES
+            name_column: S_NUMBER_EMPLOYEES
 level_attributes:
   - unique_name: STORE_level
     label: STORE

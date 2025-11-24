@@ -14,6 +14,20 @@ hierarchies:
             key_columns:
               - IB_INCOME_BAND_SK
             name_column: IB_INCOME_BAND_SK
+          - unique_name: IB_LOWER_BOUND
+            label: IB_LOWER_BOUND
+            description: '{"comment": "Lower bound of income bands"}'
+            dataset: INCOME_BAND
+            key_columns:
+              - IB_LOWER_BOUND
+            name_column: IB_LOWER_BOUND
+          - unique_name: IB_UPPER_BOUND
+            label: IB_UPPER_BOUND
+            description: '{"comment": "Upper bound of income bands"}'
+            dataset: INCOME_BAND
+            key_columns:
+              - IB_UPPER_BOUND
+            name_column: IB_UPPER_BOUND
 level_attributes:
   - unique_name: INCOME_BAND_level
     label: INCOME_BAND

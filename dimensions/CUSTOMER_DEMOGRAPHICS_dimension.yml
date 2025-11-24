@@ -15,6 +15,15 @@ hierarchies:
             key_columns:
               - CD_GENDER
             name_column: CD_GENDER
+          - unique_name: CD_DEP_COUNT
+            label: CD_DEP_COUNT
+            description: >-
+              {"comment": "Number of dependents for the customer at the time of
+              sale"}
+            dataset: CUSTOMER_DEMOGRAPHICS
+            key_columns:
+              - CD_DEP_COUNT
+            name_column: CD_DEP_COUNT
 level_attributes:
   - unique_name: CUSTOMER_DEMOGRAPHICS_level
     label: CUSTOMER_DEMOGRAPHICS

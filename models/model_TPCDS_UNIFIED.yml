@@ -7,6 +7,7 @@ dimensions:
   - W_WAREHOUSE_NAME
   - WS_SHIP_MODE_SK
   - F_SS_HAS_SALES
+  - W_WAREHOUSE_SQ_FT
 metrics:
   - unique_name: END_DATE
   - unique_name: START_DATE

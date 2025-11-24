@@ -58,8 +58,5 @@ columns:
     data_type: string
   - name: D_CURRENT_YEAR
     data_type: string
-  - name: F_YEAR
-    data_type: decimal
-    sql: DATE_DIM.D_YEAR
 connection_id: con_ATSCALE_SV_TEST_TPCDS
 table: DATE_DIM_V

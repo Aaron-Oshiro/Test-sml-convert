@@ -30,8 +30,5 @@ columns:
     data_type: string
   - name: W_GMT_OFFSET
     data_type: decimal
-  - name: W_WAREHOUSE_SQ_FT
-    data_type: decimal
-    sql: W_WAREHOUSE_SQ_FT
 connection_id: con_ATSCALE_SV_TEST_TPCDS
 table: WAREHOUSE_V
