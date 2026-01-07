@@ -1,7 +1,0 @@
-unique_name: SS_CUSTOMER_COUNT
-object_type: metric
-label: SS_CUSTOMER_COUNT
-description: '{"comment": "Count of customers who purchased through store sales"}'
-calculation_method: count non-null
-column: SS_CUSTOMER_SK
-dataset: STORE_SALES

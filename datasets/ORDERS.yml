@@ -1,0 +1,30 @@
+unique_name: ORDERS
+object_type: dataset
+label: ORDERS
+columns:
+  - name: O_ORDERKEY
+    data_type: decimal
+  - name: O_CUSTKEY
+    data_type: decimal
+  - name: O_ORDERSTATUS
+    data_type: string
+  - name: O_TOTALPRICE
+    data_type: decimal
+  - name: O_ORDERDATE
+    data_type: date
+  - name: O_ORDERPRIORITY
+    data_type: string
+  - name: O_CLERK
+    data_type: string
+  - name: O_SHIPPRIORITY
+    data_type: decimal
+  - name: O_COMMENT
+    data_type: string
+  - name: D_CUST_NAME_AND_QUANTITY
+    data_type: string
+    sql: ORDERS.f_cust_name_and_quantity
+  - name: F_CUST_NAME_AND_QUANTITY
+    data_type: string
+    sql: CUSTOMER.f_name || sum(LINEITEM.f_quantity)
+connection_id: con_ATSCALE_SV_TEST_TPCH_SF1
+table: TPCH_ORDERS
