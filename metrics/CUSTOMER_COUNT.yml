@@ -1,0 +1,6 @@
+unique_name: CUSTOMER_COUNT
+object_type: metric
+label: CUSTOMER_COUNT
+calculation_method: count non-null
+column: O_CUSTKEY
+dataset: ORDERS

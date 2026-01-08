@@ -1,0 +1,10 @@
+unique_name: DAILY_CUSTOMERS
+object_type: dataset
+label: DAILY_CUSTOMERS
+columns:
+  - name: DAY
+    data_type: date
+  - name: CUSTOMER_ID
+    data_type: decimal
+connection_id: con_ATSCALE_SV_TEST_TPCH_SF1
+table: DAILY_CUSTOMERS

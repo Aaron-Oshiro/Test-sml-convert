@@ -1,0 +1,6 @@
+unique_name: INVENTORY_CHANGE
+object_type: metric
+label: INVENTORY_CHANGE
+calculation_method: sum
+column: L_QUANTITY
+dataset: LINEITEM

@@ -1,6 +1,0 @@
-unique_name: M_CUSTOMER_COUNT
-object_type: metric
-label: M_CUSTOMER_COUNT
-calculation_method: count non-null
-column: C_CUSTKEY
-dataset: CUSTOMER

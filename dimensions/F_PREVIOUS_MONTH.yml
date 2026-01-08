@@ -1,0 +1,18 @@
+unique_name: F_PREVIOUS_MONTH
+object_type: dimension
+label: F_PREVIOUS_MONTH
+hierarchies:
+  - unique_name: F_PREVIOUS_MONTH_default_hierarchy
+    label: F_PREVIOUS_MONTH Hierarchy
+    levels:
+      - unique_name: F_PREVIOUS_MONTH_level
+        secondary_attributes: []
+is_degenerate: true
+level_attributes:
+  - unique_name: F_PREVIOUS_MONTH_level
+    label: F_PREVIOUS_MONTH
+    dataset: MONTHLY_CUSTOMERS
+    is_hidden: true
+    key_columns:
+      - F_PREVIOUS_MONTH
+    name_column: F_PREVIOUS_MONTH

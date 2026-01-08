@@ -1,0 +1,197 @@
+unique_name: model_TPCH_SEMANTIC_VIEW
+object_type: model
+label: TPCH_SEMANTIC_VIEW
+dimensions:
+  - DIM_ORDERDATE
+  - DIM_SUPPKEY
+  - DIM_SUPPNAME
+  - F_LAST_ACTIVE_MONTH
+  - F_PREVIOUS_MONTH
+metrics:
+  - unique_name: F_REVENUE
+  - unique_name: CUSTOMER_COUNT
+  - unique_name: TOTAL_REVENUE
+  - unique_name: INVENTORY_CHANGE
+  - unique_name: ORDER_COUNT
+  - unique_name: REVENUE
+  - unique_name: M_INVENTORY_CHANGE
+  - unique_name: M_QUANTITY
+  - unique_name: TOTAL_CUSTOMERS
+  - unique_name: AVG_ORDER_VALUE
+  - unique_name: CUSTOMER_COUNT_IF_MANY_QUARTERLY_ORDERS
+partitions: []
+perspectives: []
+relationships:
+  - unique_name: SYS_RELATIONSHIP_29670b5c-0669-4eb4-b9d9-f056aaa47923
+    from:
+      dataset: CUSTOMER
+      join_columns:
+        - C_NATIONKEY
+    to:
+      dimension: CUSTOMER_NATION_dimension
+      level: CUSTOMER_NATION_level
+  - unique_name: SYS_RELATIONSHIP_2992a56a-e961-40ab-82e1-2d873728cdd6
+    from:
+      dataset: CUSTOMER_NATION
+      join_columns:
+        - N_REGIONKEY
+    to:
+      dimension: CUSTOMER_REGION_dimension
+      level: CUSTOMER_REGION_level
+  - unique_name: SYS_RELATIONSHIP_1cb46c54-395e-4006-ae2d-a2f15a2d1cda
+    from:
+      dataset: LINEITEM
+      join_columns:
+        - L_PARTKEY
+        - L_SUPPKEY
+    to:
+      dimension: PARTSUPP_dimension
+      level: PARTSUPP_level
+  - unique_name: SYS_RELATIONSHIP_a2fcdd7f-bd8a-431b-b3a6-06f528b30416
+    from:
+      dataset: LINEITEM
+      join_columns:
+        - L_ORDERKEY
+    to:
+      dimension: ORDERS_dimension
+      level: ORDERS_level
+  - unique_name: SYS_RELATIONSHIP_b6f45241-bcf0-4c05-bca2-d2580ce3f679
+    from:
+      dataset: LINEITEM_Q6_1
+      join_columns:
+        - L_SHIPDATE
+        - L_PARTKEY
+    to:
+      dimension: LINEITEM_DAY_PART_dimension
+      level: LINEITEM_DAY_PART_level
+  - unique_name: SYS_RELATIONSHIP_ca118486-1147-4f61-b66a-3c259d9fe4ca
+    from:
+      dataset: LINEITEM_Q6_2
+      join_columns:
+        - L_RECEIPTDATE
+        - L_PARTKEY
+    to:
+      dimension: LINEITEM_DAY_PART_dimension
+      level: LINEITEM_DAY_PART_level
+  - unique_name: SYS_RELATIONSHIP_ea2739ac-801c-4a60-bab7-279abe474650
+    from:
+      dataset: ORDERS
+      join_columns:
+        - O_CUSTKEY
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER_level
+  - unique_name: SYS_RELATIONSHIP_1eb6b5cc-cad4-421d-abe8-28b59899e154
+    from:
+      dataset: PARTSUPP
+      join_columns:
+        - PS_SUPPKEY
+    to:
+      dimension: SUPPLIER_dimension
+      level: SUPPLIER_level
+  - unique_name: SYS_RELATIONSHIP_9d86e4b2-f82f-49ff-9cbd-33af9e63d800
+    from:
+      dataset: PARTSUPP
+      join_columns:
+        - PS_PARTKEY
+    to:
+      dimension: PART_dimension
+      level: PART_level
+  - unique_name: SYS_RELATIONSHIP_0c4c3d7c-9854-473e-ad3d-7c8106fc4d3b
+    from:
+      dataset: SUPPLIER
+      join_columns:
+        - S_NATIONKEY
+    to:
+      dimension: SUPPLIER_NATION_dimension
+      level: SUPPLIER_NATION_level
+  - unique_name: SYS_RELATIONSHIP_31234d93-b1f4-4631-a02b-4dc54b979f77
+    from:
+      dataset: SUPPLIER_NATION
+      join_columns:
+        - N_REGIONKEY
+    to:
+      dimension: SUPPLIER_REGION_dimension
+      level: SUPPLIER_REGION_level
+  - unique_name: CUSTOMER_NATION_to_self
+    from:
+      dataset: CUSTOMER_NATION
+      join_columns:
+        - N_NATIONKEY
+    to:
+      dimension: CUSTOMER_NATION_dimension
+      level: CUSTOMER_NATION_level
+  - unique_name: CUSTOMER_REGION_to_self
+    from:
+      dataset: CUSTOMER_REGION
+      join_columns:
+        - R_REGIONKEY
+    to:
+      dimension: CUSTOMER_REGION_dimension
+      level: CUSTOMER_REGION_level
+  - unique_name: PARTSUPP_to_self
+    from:
+      dataset: PARTSUPP
+      join_columns:
+        - PS_PARTKEY
+        - PS_SUPPKEY
+    to:
+      dimension: PARTSUPP_dimension
+      level: PARTSUPP_level
+  - unique_name: ORDERS_to_self
+    from:
+      dataset: ORDERS
+      join_columns:
+        - O_ORDERKEY
+    to:
+      dimension: ORDERS_dimension
+      level: ORDERS_level
+  - unique_name: LINEITEM_DAY_PART_to_self
+    from:
+      dataset: LINEITEM_DAY_PART
+      join_columns:
+        - LDP_DAY
+        - LDP_PARTKEY
+    to:
+      dimension: LINEITEM_DAY_PART_dimension
+      level: LINEITEM_DAY_PART_level
+  - unique_name: CUSTOMER_to_self
+    from:
+      dataset: CUSTOMER
+      join_columns:
+        - C_CUSTKEY
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER_level
+  - unique_name: SUPPLIER_to_self
+    from:
+      dataset: SUPPLIER
+      join_columns:
+        - S_SUPPKEY
+    to:
+      dimension: SUPPLIER_dimension
+      level: SUPPLIER_level
+  - unique_name: PART_to_self
+    from:
+      dataset: PART
+      join_columns:
+        - P_PARTKEY
+    to:
+      dimension: PART_dimension
+      level: PART_level
+  - unique_name: SUPPLIER_NATION_to_self
+    from:
+      dataset: SUPPLIER_NATION
+      join_columns:
+        - N_NATIONKEY
+    to:
+      dimension: SUPPLIER_NATION_dimension
+      level: SUPPLIER_NATION_level
+  - unique_name: SUPPLIER_REGION_to_self
+    from:
+      dataset: SUPPLIER_REGION
+      join_columns:
+        - R_REGIONKEY
+    to:
+      dimension: SUPPLIER_REGION_dimension
+      level: SUPPLIER_REGION_level

@@ -1,0 +1,6 @@
+unique_name: TOTAL_CUSTOMERS
+object_type: metric
+label: TOTAL_CUSTOMERS
+calculation_method: count non-null
+column: CUSTOMER_ID
+dataset: MONTHLY_CUSTOMERS

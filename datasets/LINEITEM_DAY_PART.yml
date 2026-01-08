@@ -1,0 +1,19 @@
+unique_name: LINEITEM_DAY_PART
+object_type: dataset
+label: LINEITEM_DAY_PART
+columns:
+  - name: LDP_DAY
+    data_type: date
+  - name: LDP_PARTKEY
+    data_type: decimal
+  - name: F_DAILY_INVENTORY_CHANGE
+    data_type: decimal
+    sql: f_daily_shipped_quantity - f_daily_returned_quantity
+  - name: F_DAILY_RETURNED_QUANTITY
+    data_type: decimal
+    sql: ZEROIFNULL(LINEITEM_Q6_2.m_returned_quantity)
+  - name: F_DAILY_SHIPPED_QUANTITY
+    data_type: decimal
+    sql: ZEROIFNULL(LINEITEM_Q6_1.m_quantity)
+connection_id: con_ATSCALE_SV_TEST_TPCH_SF1
+table: LINEITEM_DAY_PART

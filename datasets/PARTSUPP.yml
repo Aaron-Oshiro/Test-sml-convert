@@ -1,0 +1,16 @@
+unique_name: PARTSUPP
+object_type: dataset
+label: PARTSUPP
+columns:
+  - name: PS_PARTKEY
+    data_type: decimal
+  - name: PS_SUPPKEY
+    data_type: decimal
+  - name: PS_AVAILQTY
+    data_type: decimal
+  - name: PS_SUPPLYCOST
+    data_type: decimal
+  - name: PS_COMMENT
+    data_type: string
+connection_id: con_ATSCALE_SV_TEST_TPCH_SF1
+table: TPCH_PARTSUPP

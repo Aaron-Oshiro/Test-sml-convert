@@ -1,0 +1,26 @@
+unique_name: SUPPLIER_REGION_dimension
+object_type: dimension
+label: SUPPLIER_REGION
+description: Dimension for supplier region
+hierarchies:
+  - unique_name: SUPPLIER_REGION_dimension_default_hierarchy
+    label: SUPPLIER_REGION Hierarchy
+    levels:
+      - unique_name: SUPPLIER_REGION_level
+        secondary_attributes:
+          - unique_name: DIM_REGION
+            label: DIM_REGION
+            dataset: SUPPLIER_REGION
+            key_columns:
+              - R_NAME
+            name_column: R_NAME
+level_attributes:
+  - unique_name: SUPPLIER_REGION_level
+    label: SUPPLIER_REGION
+    description: '{"comment": "Dimension for supplier region"}'
+    dataset: SUPPLIER_REGION
+    is_hidden: true
+    key_columns:
+      - R_REGIONKEY
+    name_column: R_REGIONKEY
+type: standard

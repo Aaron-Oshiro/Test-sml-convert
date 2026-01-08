@@ -1,0 +1,32 @@
+unique_name: SUPPLIER_NATION_dimension
+object_type: dimension
+label: SUPPLIER_NATION
+description: Dimension for supplier nation
+hierarchies:
+  - unique_name: SUPPLIER_NATION_dimension_default_hierarchy
+    label: SUPPLIER_NATION Hierarchy
+    levels:
+      - unique_name: SUPPLIER_NATION_level
+        secondary_attributes: []
+level_attributes:
+  - unique_name: SUPPLIER_NATION_level
+    label: SUPPLIER_NATION
+    description: '{"comment": "Dimension for supplier nation"}'
+    dataset: SUPPLIER_NATION
+    is_hidden: true
+    key_columns:
+      - N_NATIONKEY
+    name_column: N_NATIONKEY
+relationships:
+  - unique_name: SYS_RELATIONSHIP_31234d93-b1f4-4631-a02b-4dc54b979f77
+    from:
+      dataset: SUPPLIER_NATION
+      hierarchy: SUPPLIER_NATION_dimension_default_hierarchy
+      join_columns:
+        - N_REGIONKEY
+      level: SUPPLIER_NATION_level
+    to:
+      dimension: SUPPLIER_REGION_dimension
+      level: SUPPLIER_REGION_level
+    type: embedded
+type: standard

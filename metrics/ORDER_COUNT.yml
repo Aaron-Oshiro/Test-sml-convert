@@ -1,6 +1,6 @@
-unique_name: M_ORDER_COUNT
+unique_name: ORDER_COUNT
 object_type: metric
-label: M_ORDER_COUNT
+label: ORDER_COUNT
 calculation_method: count non-null
 column: O_ORDERKEY
 dataset: ORDERS
