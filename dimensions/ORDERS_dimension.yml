@@ -1,0 +1,42 @@
+unique_name: ORDERS_dimension
+object_type: dimension
+label: ORDERS
+hierarchies:
+  - unique_name: ORDERS_dimension_default_hierarchy
+    label: ORDERS Hierarchy
+    levels:
+      - unique_name: ORDERS_level
+        secondary_attributes:
+          - unique_name: D_CUST_NAME_AND_QUANTITY
+            label: D_CUST_NAME_AND_QUANTITY
+            dataset: ORDERS
+            key_columns:
+              - D_CUST_NAME_AND_QUANTITY
+            name_column: D_CUST_NAME_AND_QUANTITY
+          - unique_name: F_CUST_NAME_AND_QUANTITY
+            label: F_CUST_NAME_AND_QUANTITY
+            dataset: ORDERS
+            key_columns:
+              - F_CUST_NAME_AND_QUANTITY
+            name_column: F_CUST_NAME_AND_QUANTITY
+level_attributes:
+  - unique_name: ORDERS_level
+    label: ORDERS
+    dataset: ORDERS
+    is_hidden: true
+    key_columns:
+      - O_ORDERKEY
+    name_column: O_ORDERKEY
+relationships:
+  - unique_name: SYS_RELATIONSHIP_4e93462c-9a7d-4f86-8300-08809e7339c2
+    from:
+      dataset: ORDERS
+      hierarchy: ORDERS_dimension_default_hierarchy
+      join_columns:
+        - O_CUSTKEY
+      level: ORDERS_level
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER_level
+    type: embedded
+type: standard

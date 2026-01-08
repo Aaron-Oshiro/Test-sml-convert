@@ -1,0 +1,4 @@
+unique_name: M_CUST_COUNT
+object_type: metric_calc
+label: M_CUST_COUNT
+expression: '[Measures].[M_CUSTOMER_COUNT]'
