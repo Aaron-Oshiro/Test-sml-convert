@@ -1,0 +1,110 @@
+unique_name: STORE_SALES_dimension
+object_type: dimension
+label: STORE_SALES
+hierarchies:
+  - unique_name: STORE_SALES_dimension_default_hierarchy
+    label: STORE_SALES Hierarchy
+    levels:
+      - unique_name: STORE_SALES_level
+        secondary_attributes:
+          - unique_name: SS_CUSTOMER_SK
+            label: SS_CUSTOMER_SK
+            description: '{"comment": "Customer ID"}'
+            dataset: STORE_SALES
+            key_columns:
+              - SS_CUSTOMER_SK
+            name_column: SS_CUSTOMER_SK
+          - unique_name: SS_NET_PROFIT_TIER
+            label: SS_NET_PROFIT_TIER
+            description: '{"comment": "Tier labels for net profit from store sales"}'
+            dataset: STORE_SALES
+            key_columns:
+              - SS_NET_PROFIT_TIER
+            name_column: SS_NET_PROFIT_TIER
+          - unique_name: SS_SALE_YEAR
+            label: SS_SALE_YEAR
+            description: '{"comment": "Year of store sale"}'
+            dataset: DATE_DIM
+            key_columns:
+              - D_YEAR
+            name_column: D_YEAR
+          - unique_name: F_NET_PROFIT_TIER
+            label: F_NET_PROFIT_TIER
+            description: '{"comment": "Tier labels for net profit from store sales"}'
+            dataset: STORE_SALES
+            key_columns:
+              - F_NET_PROFIT_TIER
+            name_column: F_NET_PROFIT_TIER
+          - unique_name: F_SS_ITEM_SK
+            label: F_SS_ITEM_SK
+            description: '{"comment": "Item SKU (Stock Keeping Unit) for each sale"}'
+            dataset: STORE_SALES
+            key_columns:
+              - SS_ITEM_SK
+            name_column: SS_ITEM_SK
+level_attributes:
+  - unique_name: STORE_SALES_level
+    label: STORE_SALES
+    dataset: STORE_SALES
+    is_hidden: true
+    key_columns:
+      - SS_ITEM_SK
+      - SS_TICKET_NUMBER
+    name_column: SS_ITEM_SK
+relationships:
+  - unique_name: SALES_TO_CUSTOMER
+    from:
+      dataset: STORE_SALES
+      hierarchy: STORE_SALES_dimension_default_hierarchy
+      join_columns:
+        - SS_CUSTOMER_SK
+      level: STORE_SALES_level
+    to:
+      dimension: CUSTOMER_dimension
+      level: CUSTOMER_level
+    type: embedded
+  - unique_name: SALES_TO_CUSTOMER_DEMO
+    from:
+      dataset: STORE_SALES
+      hierarchy: STORE_SALES_dimension_default_hierarchy
+      join_columns:
+        - SS_CDEMO_SK
+      level: STORE_SALES_level
+    to:
+      dimension: CUSTOMER_DEMOGRAPHICS_dimension
+      level: CUSTOMER_DEMOGRAPHICS_level
+    type: embedded
+  - unique_name: SALES_TO_DATE
+    from:
+      dataset: STORE_SALES
+      hierarchy: STORE_SALES_dimension_default_hierarchy
+      join_columns:
+        - SS_SOLD_DATE_SK
+      level: STORE_SALES_level
+    to:
+      dimension: DATE_DIM_dimension
+      level: DATE_DIM_level
+    type: embedded
+  - unique_name: SALES_TO_ITEM
+    from:
+      dataset: STORE_SALES
+      hierarchy: STORE_SALES_dimension_default_hierarchy
+      join_columns:
+        - SS_ITEM_SK
+      level: STORE_SALES_level
+    to:
+      dimension: ITEM_dimension
+      level: ITEM_level
+    type: embedded
+  - unique_name: SALES_TO_STORE
+    from:
+      dataset: STORE_SALES
+      hierarchy: STORE_SALES_dimension_default_hierarchy
+      join_columns:
+        - SS_STORE_SK
+      level: STORE_SALES_level
+    to:
+      dimension: STORE_dimension
+      level: STORE_level
+    type: embedded
+type: standard

@@ -1,0 +1,20 @@
+unique_name: CS_SHIP_MODE_SK
+object_type: dimension
+label: CS_SHIP_MODE_SK
+description: '{"comment": "Unique Identifier for Shipping mode  for catalog sales"}'
+hierarchies:
+  - unique_name: CS_SHIP_MODE_SK_default_hierarchy
+    label: CS_SHIP_MODE_SK Hierarchy
+    levels:
+      - unique_name: CS_SHIP_MODE_SK_level
+        secondary_attributes: []
+is_degenerate: true
+level_attributes:
+  - unique_name: CS_SHIP_MODE_SK_level
+    label: CS_SHIP_MODE_SK
+    description: '{"comment": "Unique Identifier for Shipping mode  for catalog sales"}'
+    dataset: CATALOG_SALES
+    is_hidden: true
+    key_columns:
+      - CS_SHIP_MODE_SK
+    name_column: CS_SHIP_MODE_SK

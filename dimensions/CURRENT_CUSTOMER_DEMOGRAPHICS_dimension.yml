@@ -1,0 +1,20 @@
+unique_name: CURRENT_CUSTOMER_DEMOGRAPHICS_dimension
+object_type: dimension
+label: CURRENT_CUSTOMER_DEMOGRAPHICS
+description: Dimension for Current customer demographics
+hierarchies:
+  - unique_name: CURRENT_CUSTOMER_DEMOGRAPHICS_dimension_default_hierarchy
+    label: CURRENT_CUSTOMER_DEMOGRAPHICS Hierarchy
+    levels:
+      - unique_name: CURRENT_CUSTOMER_DEMOGRAPHICS_level
+        secondary_attributes: []
+level_attributes:
+  - unique_name: CURRENT_CUSTOMER_DEMOGRAPHICS_level
+    label: CURRENT_CUSTOMER_DEMOGRAPHICS
+    description: '{"comment": "Dimension for Current customer demographics"}'
+    dataset: CURRENT_CUSTOMER_DEMOGRAPHICS
+    is_hidden: true
+    key_columns:
+      - CD_DEMO_SK
+    name_column: CD_DEMO_SK
+type: standard

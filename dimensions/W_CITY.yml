@@ -1,0 +1,20 @@
+unique_name: W_CITY
+object_type: dimension
+label: W_CITY
+description: '{"comment": "Warehouse city"}'
+hierarchies:
+  - unique_name: W_CITY_default_hierarchy
+    label: W_CITY Hierarchy
+    levels:
+      - unique_name: W_CITY_level
+        secondary_attributes: []
+is_degenerate: true
+level_attributes:
+  - unique_name: W_CITY_level
+    label: W_CITY
+    description: '{"comment": "Warehouse city"}'
+    dataset: WAREHOUSE
+    is_hidden: true
+    key_columns:
+      - W_CITY
+    name_column: W_CITY

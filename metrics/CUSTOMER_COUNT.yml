@@ -1,0 +1,7 @@
+unique_name: CUSTOMER_COUNT
+object_type: metric
+label: CUSTOMER_COUNT
+description: '{"comment": "Count of distinct customer identifiers"}'
+calculation_method: count non-null
+column: C_CUSTOMER_SK
+dataset: CUSTOMER

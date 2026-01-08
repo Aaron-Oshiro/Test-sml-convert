@@ -1,0 +1,7 @@
+unique_name: START_DATE
+object_type: metric
+label: START_DATE
+description: '{"comment": "Min date (start date) of the store sales"}'
+calculation_method: minimum
+column: D_DATE
+dataset: DATE_DIM

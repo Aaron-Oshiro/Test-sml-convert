@@ -1,0 +1,25 @@
+unique_name: CUSTOMER_DEMOGRAPHICS
+object_type: dataset
+label: CUSTOMER_DEMOGRAPHICS
+description: Dimension for Customer demographics at the time of sale
+columns:
+  - name: CD_DEMO_SK
+    data_type: decimal
+  - name: CD_GENDER
+    data_type: string
+  - name: CD_MARITAL_STATUS
+    data_type: string
+  - name: CD_EDUCATION_STATUS
+    data_type: string
+  - name: CD_PURCHASE_ESTIMATE
+    data_type: decimal
+  - name: CD_CREDIT_RATING
+    data_type: string
+  - name: CD_DEP_COUNT
+    data_type: decimal
+  - name: CD_DEP_EMPLOYED_COUNT
+    data_type: decimal
+  - name: CD_DEP_COLLEGE_COUNT
+    data_type: decimal
+connection_id: con_ATSCALE_SV_TEST_TPCDS
+table: CUSTOMER_DEMOGRAPHICS_V

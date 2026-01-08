@@ -1,0 +1,12 @@
+unique_name: INCOME_BAND
+object_type: dataset
+label: INCOME_BAND
+columns:
+  - name: IB_INCOME_BAND_SK
+    data_type: decimal
+  - name: IB_LOWER_BOUND
+    data_type: decimal
+  - name: IB_UPPER_BOUND
+    data_type: decimal
+connection_id: con_ATSCALE_SV_TEST_TPCDS
+table: INCOME_BAND_V

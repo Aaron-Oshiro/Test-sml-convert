@@ -1,0 +1,32 @@
+unique_name: DATE_DIM_dimension
+object_type: dimension
+label: DATE_DIM
+hierarchies:
+  - unique_name: DATE_DIM_dimension_default_hierarchy
+    label: DATE_DIM Hierarchy
+    levels:
+      - unique_name: DATE_DIM_level
+        secondary_attributes:
+          - unique_name: D_DATE
+            label: D_DATE
+            description: '{"comment": "Date of the day"}'
+            dataset: DATE_DIM
+            key_columns:
+              - D_DATE
+            name_column: D_DATE
+          - unique_name: D_YEAR
+            label: D_YEAR
+            description: '{"comment": "Year of Date"}'
+            dataset: DATE_DIM
+            key_columns:
+              - D_YEAR
+            name_column: D_YEAR
+level_attributes:
+  - unique_name: DATE_DIM_level
+    label: DATE_DIM
+    dataset: DATE_DIM
+    is_hidden: true
+    key_columns:
+      - D_DATE_SK
+    name_column: D_DATE_SK
+type: standard

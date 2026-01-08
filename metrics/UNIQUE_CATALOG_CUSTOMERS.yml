@@ -1,0 +1,7 @@
+unique_name: UNIQUE_CATALOG_CUSTOMERS
+object_type: metric
+label: UNIQUE_CATALOG_CUSTOMERS
+description: '{"comment": "Unique customers who made a purchase through catalog sales"}'
+calculation_method: count non-null
+column: CS_BILL_CUSTOMER_SK
+dataset: CATALOG_SALES
