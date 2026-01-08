@@ -1,0 +1,18 @@
+unique_name: F_QUANTITY
+object_type: dimension
+label: F_QUANTITY
+hierarchies:
+  - unique_name: F_QUANTITY_default_hierarchy
+    label: F_QUANTITY Hierarchy
+    levels:
+      - unique_name: F_QUANTITY_level
+        secondary_attributes: []
+is_degenerate: true
+level_attributes:
+  - unique_name: F_QUANTITY_level
+    label: F_QUANTITY
+    dataset: LINEITEM
+    is_hidden: true
+    key_columns:
+      - L_QUANTITY
+    name_column: L_QUANTITY
